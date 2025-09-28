@@ -18,7 +18,7 @@ export default function DotLottie({
 }: Props) {
   return (
     <DotLottiePlayer
-      src={`/dot-lottie/${fileName}.lottie`}
+      src={`/lottie/${fileName}.lottie`}
       speed={speed}
       autoplay
       loop={loop}

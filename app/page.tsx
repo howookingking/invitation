@@ -34,20 +34,16 @@ export const WEDDING_INFO = {
   },
 } as const;
 
-const WeddingInvitation = () => {
-  const [currentSection, setCurrentSection] = useState(0);
-  const [copied, setCopied] = useState("");
-  const [showAccountInfo, setShowAccountInfo] = useState(false);
+export const SECTIONS = [
+  "hero",
+  "message",
+  "info",
+  "location",
+  "gallery",
+  "account",
+];
 
-  const sections = [
-    "main",
-    "message",
-    "info",
-    "location",
-    "gallery",
-    "account",
-  ];
-
+export default function Home() {
   // const copyToClipboard = async (text, type) => {
   //   try {
   //     await navigator.clipboard.writeText(text);
@@ -58,60 +54,19 @@ const WeddingInvitation = () => {
   //   }
   // };
 
-  const scrollToSection = (index: number) => {
-    setCurrentSection(index);
-    const element = document.getElementById(sections[index]);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-      sections.forEach((section, index) => {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setCurrentSection(index);
-          }
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div className="min-h-screen ">
-      {/* Navigation Dots */}
-      <div className="fixed right-2 top-1/2 transform -translate-y-1/2 z-50 space-y-2 flex flex-col">
-        {sections.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => scrollToSection(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              currentSection === index
-                ? "bg-rose-500 h-6"
-                : "bg-rose-200 hover:bg-rose-300"
-            }`}
-          />
-        ))}
-      </div>
-
+    <>
       <HeroSection />
 
       <MessageSection />
 
-      <WeddingInfoSection />
+      {/* <div className="w-full h-40 bg-rose-300 absolute bottom-0 left-0 bg-[url('/photos/hero-crop.jpg')] bg-fixed bg-center bg-cover opacity-50" /> */}
+
+      {/* <WeddingInfoSection /> */}
       {/* Wedding Info Section */}
 
       {/* Location Section */}
-      <section
+      {/* <section
         id="location"
         className="min-h-screen flex flex-col justify-center px-6 py-16"
       >
@@ -157,13 +112,13 @@ const WeddingInvitation = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Gallery Section */}
-      <GallerySection />
+      {/* <GallerySection /> */}
 
       {/* Account Info Section */}
-      <section
+      {/* <section
         id="account"
         className="min-h-screen flex flex-col justify-center px-6 py-16"
       >
@@ -184,21 +139,6 @@ const WeddingInvitation = () => {
                 <span className="text-gray-600 text-sm">
                   {WEDDING_INFO.accountInfo.groom}
                 </span>
-                {/* <button
-                  onClick={() =>
-                    copyToClipboard(
-                      WEDDING_INFO.accountInfo.groom.replace(/[^0-9]/g, ""),
-                      "groomAccount"
-                    )
-                  }
-                  className="text-blue-600 hover:text-blue-700 transition-colors"
-                >
-                  {copied === "groomAccount" ? (
-                    <Check size={16} />
-                  ) : (
-                    <Copy size={16} />
-                  )}
-                </button> */}
               </div>
             </div>
 
@@ -213,21 +153,6 @@ const WeddingInvitation = () => {
                 <span className="text-gray-600 text-sm">
                   {WEDDING_INFO.accountInfo.bride}
                 </span>
-                {/* <button
-                  onClick={() =>
-                    copyToClipboard(
-                      WEDDING_INFO.accountInfo.bride.replace(/[^0-9]/g, ""),
-                      "brideAccount"
-                    )
-                  }
-                  className="text-pink-600 hover:text-pink-700 transition-colors"
-                >
-                  {copied === "brideAccount" ? (
-                    <Check size={16} />
-                  ) : (
-                    <Copy size={16} />
-                  )}
-                </button> */}
               </div>
             </div>
           </div>
@@ -237,27 +162,7 @@ const WeddingInvitation = () => {
             <p>참석해 주셔서 감사합니다 ♡</p>
           </div>
         </div>
-      </section>
-
-      {/* Custom Styles */}
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fade-in {
-          animation: fade-in 1s ease-out;
-        }
-      `}</style>
-    </div>
+      </section> */}
+    </>
   );
-};
-
-export default WeddingInvitation;
+}
