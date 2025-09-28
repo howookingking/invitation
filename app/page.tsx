@@ -4,7 +4,6 @@ import GallerySection from "@/components/sections/gallery/gallery-section";
 import HeroSection from "@/components/sections/hero/hero-section";
 import MessageSection from "@/components/sections/message/message-section";
 import WeddingInfoSection from "@/components/sections/wedding-info/wedding-info-section";
-import { Check, Copy } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export const WEDDING_INFO = {
