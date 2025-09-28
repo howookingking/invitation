@@ -51,10 +51,27 @@ export default function InterativePets() {
       isExiting: false,
     };
 
-    setHearts((prev) => [...prev, newHeart]);
+    // 다른 펫들의 메시지를 즉시 exit 상태로 변경
+    setMessages((prev) =>
+      prev.map((message) =>
+        message.petType !== hovered ? { ...message, isExiting: true } : message,
+      ),
+    );
+
+    // 기존 같은 펫의 메시지 제거하고 새 메시지 즉시 추가
+    setMessages((prev) => [
+      ...prev.filter((msg) => msg.petType !== hovered),
+      newMessage,
+    ]);
     setHeartIdCounter(newHeartId);
-    setMessages((prev) => [...prev, newMessage]);
     setMessageIdCounter(newMessageId);
+
+    // 300ms 후 다른 펫들의 exit 중인 메시지 완전 제거
+    setTimeout(() => {
+      setMessages((prev) => prev.filter((message) => !message.isExiting));
+    }, 300);
+
+    setHearts((prev) => [...prev, newHeart]);
 
     setPreventHide(true);
 
@@ -67,7 +84,7 @@ export default function InterativePets() {
       setHearts((prev) => prev.filter((heart) => heart.id !== newHeartId));
     }, 2000);
 
-    // 메시지 exit 애니메이션 시작
+    // 새 메시지 exit 애니메이션 시작 (2초 후)
     setTimeout(() => {
       setMessages((prev) =>
         prev.map((message) =>
@@ -78,7 +95,7 @@ export default function InterativePets() {
       );
     }, 1700); // 2초보다 300ms 일찍 시작
 
-    // 메시지 제거 (exit 애니메이션 후)
+    // 새 메시지 제거 (exit 애니메이션 후)
     setTimeout(() => {
       setMessages((prev) =>
         prev.filter((message) => message.id !== newMessageId),
