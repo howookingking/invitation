@@ -1,25 +1,22 @@
-"use client";
-
 import GallerySection from "@/components/sections/gallery/gallery-section";
 import HeroSection from "@/components/sections/hero/hero-section";
 import MessageSection from "@/components/sections/message/message-section";
 import WeddingInfoSection from "@/components/sections/wedding-info/wedding-info-section";
-import { useEffect, useState } from "react";
 
 export const WEDDING_INFO = {
-  bride: "권유진",
   groom: "이정우",
+  bride: "권유진",
   weddingDate: "2026년 1월 18일",
   weddingTime: "오전 11시 00분",
-  venue: " The Verde G",
+  venue: "The Verde G",
   venueAddress: "서울시 영등포구 국회대로 612",
   venueDetail: "2층",
-  brideParents: {
+  brideFamily: {
     father: "권순안",
     mother: "홍은수",
     pet: "홍삼",
   },
-  groomParents: {
+  groomFamily: {
     father: "이윤재",
     mother: "이은영",
     pet: "올리, 호우",
@@ -60,62 +57,11 @@ export default function Home() {
 
       <MessageSection />
 
-      {/* <div className="w-full h-40 bg-rose-300 absolute bottom-0 left-0 bg-[url('/photos/hero-crop.jpg')] bg-fixed bg-center bg-cover opacity-50" /> */}
+      <WeddingInfoSection />
 
-      {/* <WeddingInfoSection /> */}
-      {/* Wedding Info Section */}
+      <GallerySection />
 
       {/* Location Section */}
-      {/* <section
-        id="location"
-        className="min-h-screen flex flex-col justify-center px-6 py-16"
-      >
-        <div className="max-w-md mx-auto space-y-8">
-          <h2 className="text-2xl font-light text-center text-gray-800">
-            오시는 길
-          </h2>
-
-          <div className="space-y-6">
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-rose-100">
-              <h3 className="font-medium text-gray-800 mb-4">
-                {WEDDING_INFO.venue}
-              </h3>
-              <p className="text-gray-600 mb-2">{WEDDING_INFO.venueAddress}</p>
-              <p className="text-sm text-gray-500 mb-4">
-                {WEDDING_INFO.venueDetail}
-              </p>
-
-              <div className="bg-gray-100 rounded-xl h-48 flex items-center justify-center mb-4">
-                <p className="text-gray-500">지도가 여기에 표시됩니다</p>
-              </div>
-
-              <button className="w-full bg-rose-500 text-white py-3 rounded-xl hover:bg-rose-600 transition-colors">
-                길찾기
-              </button>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-rose-100">
-              <h4 className="font-medium text-gray-800 mb-3">교통안내</h4>
-              <div className="space-y-2 text-sm text-gray-600">
-                <p>
-                  <span className="font-medium">지하철:</span> 2호선
-                  을지로입구역 7번 출구
-                </p>
-                <p>
-                  <span className="font-medium">버스:</span> 151, 162, 262, 463
-                </p>
-                <p>
-                  <span className="font-medium">주차:</span> 호텔 내 주차장
-                  이용가능
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Gallery Section */}
-      {/* <GallerySection /> */}
 
       {/* Account Info Section */}
       {/* <section

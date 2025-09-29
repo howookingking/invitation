@@ -1,8 +1,6 @@
 import { WEDDING_INFO } from "@/app/page";
 import SectionContainer from "@/components/common/section-container";
-import { Separator } from "@/components/ui/separator";
 import heroImage from "@/public/photos/hero1.jpeg";
-import { HeartIcon } from "lucide-react";
 import Image from "next/image";
 
 export default function HeroSection() {
@@ -10,14 +8,14 @@ export default function HeroSection() {
     <SectionContainer id="hero">
       <div className="flex h-1/3 flex-col items-center justify-center gap-2">
         <p className="text-lg tracking-wider text-rose-600">
-          WEDDING INVITATION
+          We Are Getting Married
         </p>
 
-        <h1 className="text-4xl font-light tracking-wide text-gray-800">
+        <h1 className="text-4xl tracking-wide text-gray-800">
           {WEDDING_INFO.groom} & {WEDDING_INFO.bride}
         </h1>
 
-        <div className="h-px w-40 bg-rose-300" />
+        <div className="h-px w-60 bg-rose-300" />
 
         <div className="mt-2 flex flex-col items-center space-y-1 text-gray-600">
           <p className="text-lg">{WEDDING_INFO.weddingDate}</p>

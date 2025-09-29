@@ -3,7 +3,7 @@ import React, { useMemo } from "react";
 
 export default function FloatingHearts() {
   const hearts = useMemo(() => {
-    return [...Array(6)].map((_, i) => ({
+    return [...Array(10)].map((_, i) => ({
       id: i,
       size: Math.random() * 24 + 12, // Random size between 12-36
       left: Math.random() * 90 + 5, // Random position between 5%-95%
@@ -15,11 +15,11 @@ export default function FloatingHearts() {
   }, []);
 
   return (
-    <div className="absolute inset-0 pointer-events-none">
+    <div className="pointer-events-none fixed inset-0">
       {hearts.map((heart) => (
         <HeartIcon
           key={heart.id}
-          className="absolute text-rose-500 animate-bounce"
+          className="absolute z-0 animate-bounce text-rose-500"
           size={heart.size}
           style={{
             left: `${heart.left}%`,

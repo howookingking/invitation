@@ -31,8 +31,12 @@ export default function InterativePets() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [messageIdCounter, setMessageIdCounter] = useState(0);
 
-  const handleClick = (e: React.MouseEvent) => {
+  const handleClick = (e: React.MouseEvent | React.TouchEvent) => {
     if (!containerRef.current) return;
+
+    // 터치 이벤트와 마우스 이벤트 모두 처리
+    const clientX = "touches" in e ? e.touches[0]?.clientX || 0 : e.clientX;
+    const clientY = "touches" in e ? e.touches[0]?.clientY || 0 : e.clientY;
 
     // 컨테이너를 기준으로 좌표 계산
     const rect = containerRef.current.getBoundingClientRect();
@@ -41,8 +45,8 @@ export default function InterativePets() {
 
     const newHeart = {
       id: newHeartId,
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
+      x: clientX - rect.left,
+      y: clientY - rect.top,
     };
 
     const newMessage = {
@@ -103,6 +107,10 @@ export default function InterativePets() {
     }, 2000);
   };
 
+  const handleTouchStart = (pet: PetEnum) => {
+    setHovered(pet);
+  };
+
   const handleMouseEnter = (pet: PetEnum) => {
     setHovered(pet);
   };
@@ -130,10 +138,11 @@ export default function InterativePets() {
             src={olly}
             className={cn(
               "cursor-pointer transition duration-400 hover:scale-150",
-              hovered === "olly" ? "z-30" : "z-0",
+              hovered === "olly" ? "z-30 scale-150" : "z-0",
             )}
             onMouseEnter={() => handleMouseEnter("olly")}
             onMouseLeave={handleMouseLeave}
+            onTouchStart={() => handleTouchStart("olly")}
             onClick={handleClick}
           />
           {(() => {
@@ -167,10 +176,11 @@ export default function InterativePets() {
             src={howoo}
             className={cn(
               "scale-125 cursor-pointer transition duration-400 hover:scale-190",
-              hovered === "howoo" ? "z-30" : "z-0",
+              hovered === "howoo" ? "z-30 scale-190" : "z-0",
             )}
             onMouseEnter={() => handleMouseEnter("howoo")}
             onMouseLeave={handleMouseLeave}
+            onTouchStart={() => handleTouchStart("howoo")}
             onClick={handleClick}
           />
           {(() => {
@@ -207,10 +217,11 @@ export default function InterativePets() {
             src={hongsam}
             className={cn(
               "scale-115 cursor-pointer transition duration-400 hover:scale-170",
-              hovered === "hongsam" ? "z-30" : "z-0",
+              hovered === "hongsam" ? "z-30 scale-170" : "z-0",
             )}
             onMouseEnter={() => handleMouseEnter("hongsam")}
             onMouseLeave={handleMouseLeave}
+            onTouchStart={() => handleTouchStart("hongsam")}
             onClick={handleClick}
           />
           {(() => {
