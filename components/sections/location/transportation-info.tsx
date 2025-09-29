@@ -11,14 +11,14 @@ export default function TransportationInfo() {
     <div className="flex flex-col gap-6 px-4 py-6">
       {TRANSPORTATIONS.map(({ icon, title, items }) => (
         <div key={title} className="gap-2">
-          <div className="mb-1 flex items-center gap-1 text-sm text-rose-500">
+          <div className="mb-1 flex items-center gap-1 text-rose-500">
             {icon}
             {title}
           </div>
 
-          <ul className="space-y-0.5">
+          <ul className="space-y-0.5 pl-1">
             {items.map((item, index) => (
-              <li key={index} className="text-xs leading-relaxed text-gray-600">
+              <li key={index} className="text-sm leading-relaxed text-gray-600">
                 {item}
               </li>
             ))}
@@ -44,16 +44,6 @@ const TRANSPORTATIONS = [
     icon: <TramFrontIcon size={16} />,
     title: "지하철",
     items: ["2호선·5호선 영등포구청역 4번 출구 도보 10분"],
-  },
-  {
-    icon: <BusFrontIcon size={16} />,
-    title: "버스",
-    items: [
-      "서울시림청소년 문화센터: 간선 660",
-      "하이서울유스호스텔: 일반 5",
-      "신화병원: 좌석 700, 간선 605, 간선 661, 간선 760, 지선 5616, 지선 5714",
-      "삼환아파트: 직행 9030, 직행 8000",
-    ],
   },
   {
     icon: <BusFrontIcon size={16} />,
