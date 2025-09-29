@@ -66,7 +66,7 @@ export default function SectionContainer({
       id={id}
       ref={sectionRef}
       className={cn(
-        "relative flex h-lvh snap-start snap-always flex-col justify-center overflow-hidden",
+        "relative flex min-h-lvh snap-start snap-always flex-col justify-center overflow-hidden",
         className,
       )}
     >

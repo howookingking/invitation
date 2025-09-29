@@ -1,6 +1,6 @@
 "use client";
 
-import { SECTIONS } from "@/app/page";
+import { SECTIONS } from "@/constants/wedding";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 
@@ -36,14 +36,14 @@ export default function SectionIndicator() {
   }, []);
 
   return (
-    <div className="fixed right-2 top-1/2 transform -translate-y-1/2 z-50 gap-3 flex flex-col">
+    <div className="fixed top-1/2 right-2 z-50 flex -translate-y-1/2 transform flex-col gap-3">
       {SECTIONS.map((_, index) => (
         <Button
           key={index}
           onClick={() => scrollToSection(index)}
-          className={`w-3 h-3 rounded-full transition-all duration-300 p-0 hover:bg-rose-400 cursor-pointer ${
+          className={`h-3 w-3 cursor-pointer rounded-full p-0 transition-all duration-300 hover:bg-rose-400 ${
             currentSection === index
-              ? "bg-rose-500 h-6"
+              ? "h-6 bg-rose-500"
               : "bg-rose-200 hover:bg-rose-300"
           }`}
         />

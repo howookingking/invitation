@@ -1,11 +1,11 @@
-import { WEDDING_INFO } from "@/app/page";
 import SectionContainer from "@/components/common/section-container";
+import { WEDDING_INFO } from "@/constants/wedding";
 import heroImage from "@/public/photos/hero1.jpeg";
 import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <SectionContainer id="hero">
+    <SectionContainer id="hero" className="h-lvh">
       <div className="flex h-1/3 flex-col items-center justify-center gap-2">
         <p className="text-lg tracking-wider text-rose-600">
           We Are Getting Married

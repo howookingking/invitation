@@ -1,44 +1,8 @@
 import GallerySection from "@/components/sections/gallery/gallery-section";
 import HeroSection from "@/components/sections/hero/hero-section";
+import LocationSection from "@/components/sections/location/location-section";
 import MessageSection from "@/components/sections/message/message-section";
 import WeddingInfoSection from "@/components/sections/wedding-info/wedding-info-section";
-
-export const WEDDING_INFO = {
-  groom: "이정우",
-  bride: "권유진",
-  weddingDate: "2026년 1월 18일",
-  weddingTime: "오전 11시 00분",
-  venue: "The Verde G",
-  venueAddress: "서울시 영등포구 국회대로 612",
-  venueDetail: "2층",
-  brideFamily: {
-    father: "권순안",
-    mother: "홍은수",
-    pet: "홍삼",
-  },
-  groomFamily: {
-    father: "이윤재",
-    mother: "이은영",
-    pet: "올리, 호우",
-  },
-  contact: {
-    groom: "010-5651-4187",
-    bride: "010-9755-2517",
-  },
-  accountInfo: {
-    bride: "신한은행 110-123-456789",
-    groom: "국민은행 987-654-321012",
-  },
-} as const;
-
-export const SECTIONS = [
-  "hero",
-  "message",
-  "info",
-  "location",
-  "gallery",
-  "account",
-];
 
 export default function Home() {
   // const copyToClipboard = async (text, type) => {
@@ -58,6 +22,8 @@ export default function Home() {
       <MessageSection />
 
       <WeddingInfoSection />
+
+      <LocationSection />
 
       <GallerySection />
 

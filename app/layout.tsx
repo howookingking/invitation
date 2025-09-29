@@ -16,7 +16,7 @@ const geistMono = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "🤵🏻정우👰🏻‍♀️유진",
+  title: "🤵🏻정우 👰🏻‍♀️유진",
   description: "1월 18일 오전 11시",
 };
 
@@ -30,7 +30,9 @@ export default function RootLayout({
       <body
         className={`${font.className} ${geistMono.variable} bg-rose-50 antialiased`}
       >
-        <main className="mx-auto max-w-[400px] bg-white">{children}</main>
+        <main className="mx-auto max-w-[400px] bg-white shadow-xl">
+          {children}
+        </main>
 
         {/* <FloatingHearts /> */}
         <SectionIndicator />

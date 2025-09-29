@@ -1,5 +1,5 @@
-import { WEDDING_INFO } from "@/app/page";
 import SectionContainer from "@/components/common/section-container";
+import { WEDDING_INFO } from "@/constants/wedding";
 import { CalendarIcon, ClockIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 
 export default function WeddingInfoSection() {

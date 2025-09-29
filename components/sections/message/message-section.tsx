@@ -1,8 +1,8 @@
-import { WEDDING_INFO } from "@/app/page";
-import { HeartIcon } from "lucide-react";
 import SectionContainer from "@/components/common/section-container";
 import SectionTitle from "@/components/common/section-title";
 import { Card } from "@/components/ui/card";
+import { WEDDING_INFO } from "@/constants/wedding";
+import { HeartIcon } from "lucide-react";
 import InteractivePets from "./interactive-pets";
 
 export default function MessageSection() {
