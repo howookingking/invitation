@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${font.className} ${geistMono.variable} bg-rose-50 antialiased`}
       >
-        <main className="mx-auto max-w-[400px] bg-white shadow-xl">
+        <main className="mx-auto max-w-[430px] bg-white shadow-xl">
           {children}
         </main>
 

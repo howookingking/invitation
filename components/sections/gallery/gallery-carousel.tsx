@@ -36,7 +36,7 @@ export default function GalleryCarousel() {
         {Array.from({ length: 21 }).map((_, index) => (
           <CarouselItem key={index}>
             <Card className="border-0 p-0 shadow-none">
-              <CardContent className="relative flex h-[600px] max-w-[400px] items-center justify-center">
+              <CardContent className="relative flex h-[660px] max-w-[430px] items-center justify-center">
                 <Image
                   src={`/photos/gallery/${index + 1}.jpg`}
                   alt="gallery"
@@ -59,7 +59,7 @@ export default function GalleryCarousel() {
         variant="ghost"
       />
 
-      <div className="absolute right-2 bottom-2 rounded-4xl bg-black/50 px-2 py-1 font-mono text-xs font-bold text-white">
+      <div className="absolute right-2 bottom-4 rounded-4xl bg-black/50 px-2 py-1 font-mono text-xs font-bold text-white">
         {current} / {count}
       </div>
     </Carousel>
