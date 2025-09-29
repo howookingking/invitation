@@ -21,20 +21,7 @@ export const WEDDING_INFO = {
     groom: "010-5651-4187",
     bride: "010-9755-2517",
   },
-  accountInfo: {
-    bride: "신한은행 110-123-456789",
-    groom: "국민은행 987-654-321012",
-  },
 } as const;
-
-export const SECTIONS = [
-  "hero",
-  "message",
-  "info",
-  "location",
-  "gallery",
-  "account",
-] as const;
 
 export const MAPS = [
   {
@@ -62,3 +49,16 @@ export const MAPS = [
 
 export const GOOGLE_MAP_URL =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.23629152319!2d126.89965277668925!3d37.52592687204912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9ff442b60515%3A0xb3596cd28f58076d!2z642U67Kg66W0RyhUaGUgVmVyZGUgRyk!5e0!3m2!1sko!2skr!4v1759124450328!5m2!1sko!2skr";
+
+export const ACCOUNT_INFO = {
+  groom: {
+    self: { name: "이정우", bank: "하나", account: "이정우-123-456789" },
+    father: { name: "이윤재", bank: "신한", account: "이윤재-0123-456789" },
+    mother: { name: "이은영", bank: "신한", account: "이은영-123-456789" },
+  },
+  bride: {
+    self: { name: "권유진", bank: "신한", account: "권유진-123-456789" },
+    father: { name: "권순안", bank: "신한", account: "권순안-123-456789" },
+    mother: { name: "홍은수", bank: "신한", account: "홍은수-123-456789" },
+  },
+} as const;

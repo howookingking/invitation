@@ -1,15 +1,15 @@
 "use client";
 
-import { SECTIONS } from "@/constants/wedding";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
+import { SECTIONS } from "@/app/page";
 
 export default function SectionIndicator() {
   const [currentSection, setCurrentSection] = useState(0);
 
   const scrollToSection = (index: number) => {
     setCurrentSection(index);
-    const element = document.getElementById(SECTIONS[index]);
+    const element = document.getElementById(SECTIONS[index].id);
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -18,7 +18,7 @@ export default function SectionIndicator() {
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       SECTIONS.forEach((section, index) => {
-        const element = document.getElementById(section);
+        const element = document.getElementById(section.id);
         if (element) {
           const { offsetTop, offsetHeight } = element;
           if (

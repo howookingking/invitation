@@ -36,7 +36,7 @@ export default function RootLayout({
 
         {/* <FloatingHearts /> */}
         <SectionIndicator />
-        <Toaster />
+        <Toaster richColors position="top-center" theme="light" />
       </body>
     </html>
   );
