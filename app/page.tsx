@@ -7,6 +7,8 @@ import LocationSection from "@/components/sections/location/location-section";
 import MessageSection from "@/components/sections/message/message-section";
 import WeddingInfoSection from "@/components/sections/wedding-info/wedding-info-section";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <>
