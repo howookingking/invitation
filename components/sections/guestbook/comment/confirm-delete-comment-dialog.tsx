@@ -98,7 +98,7 @@ export default function ConfirmDeleteCommentDialog({
 
   return (
     <AlertDialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-      <AlertDialogTrigger asChild className="absolute top-3 right-3">
+      <AlertDialogTrigger asChild className="absolute top-2 right-2">
         <XIcon
           size={12}
           className="hover:text-destructive cursor-pointer transition"

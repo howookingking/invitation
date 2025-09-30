@@ -20,7 +20,7 @@ export async function fetchComments() {
         created_at
       `,
     )
-    .order("created_at", { ascending: true })
+    .order("created_at", { ascending: false })
     .overrideTypes<CommentWithoutPassword[]>();
 
   if (error) {
@@ -39,7 +39,7 @@ export async function createComment(
 ) {
   const supabase = await createClient();
 
-  const { error } = await supabase.from("comments").insert({
+  const { error } = await supabase.from("invitation_comments").insert({
     contents: commentInput,
     name: nameInput,
     password: passwordInput,

@@ -4,11 +4,11 @@ import { micah } from "@dicebear/collection";
 import { createAvatar } from "@dicebear/core";
 import { useMemo } from "react";
 
-export default function DicebearAvatar() {
+export default function DicebearAvatar({ size = 32 }: { size?: number }) {
   const avatar = useMemo(
     () =>
       createAvatar(micah, {
-        size: 32,
+        size,
         radius: 50,
         backgroundColor: ["b6e3f4", "c0aede", "d1d4f9"],
         seed: "Amaya",

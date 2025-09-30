@@ -19,23 +19,21 @@ export default function SingleComment({
   visitorId,
 }: Props) {
   return (
-    <li className="bg-card hover:bg-muted/30 relative h-full rounded-lg border p-4 transition-colors">
+    <li className="bg-card hover:bg-muted/30 relative h-full rounded-sm border p-4 transition-colors">
       <div className="flex h-full flex-col justify-between gap-2">
         <div className="space-y-2">
           {/* card header */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-1">
-              <DicebearAvatar />
-              <p className="text-sm font-semibold">{name}</p>
-              <MyCommentBadge visitorId={visitorId} />
-            </div>
 
-            <div>
-              <ConfirmDeleteCommentDialog
-                visitorId={visitorId}
-                commentId={commentId}
-              />
-            </div>
+          <div className="flex items-center gap-1">
+            <DicebearAvatar />
+            <p className="text-sm font-semibold">{name}</p>
+          </div>
+
+          <div>
+            <ConfirmDeleteCommentDialog
+              visitorId={visitorId}
+              commentId={commentId}
+            />
           </div>
 
           {/* contents */}
@@ -43,7 +41,10 @@ export default function SingleComment({
         </div>
 
         {/* footer */}
-        <CommentTimeIndicator createdAt={createdAt} />
+        <div className="flex items-center justify-between">
+          <MyCommentBadge visitorId={visitorId} />
+          <CommentTimeIndicator createdAt={createdAt} />
+        </div>
       </div>
     </li>
   );

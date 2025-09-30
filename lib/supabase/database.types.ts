@@ -68,7 +68,6 @@ export type Database = {
           created_at: string
           name: string
           password: string
-          visit_date: string
           visitor_id: string
         }
         Insert: {
@@ -77,7 +76,6 @@ export type Database = {
           created_at?: string
           name: string
           password: string
-          visit_date: string
           visitor_id?: string
         }
         Update: {
@@ -86,7 +84,6 @@ export type Database = {
           created_at?: string
           name?: string
           password?: string
-          visit_date?: string
           visitor_id?: string
         }
         Relationships: []

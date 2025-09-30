@@ -7,7 +7,7 @@ type Props = {
 
 export default function CommentTimeIndicator({ createdAt }: Props) {
   return (
-    <p className="text-muted-foreground flex items-center justify-end gap-1 text-xs">
+    <p className="text-muted-foreground flex items-center gap-1 text-xs">
       <ClockIcon size={12} />
       <span>{getRelativeTimeKorean(createdAt)}</span>
     </p>

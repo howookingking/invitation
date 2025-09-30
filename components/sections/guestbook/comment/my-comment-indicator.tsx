@@ -8,7 +8,7 @@ export default function MyCommentBadge({ visitorId }: { visitorId: string }) {
   const isAuthor = localVisitorId === visitorId;
 
   if (!isAuthor) {
-    return null;
+    return <div />;
   }
 
   return <Badge>내댓글</Badge>;
