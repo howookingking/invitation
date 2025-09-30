@@ -1,5 +1,7 @@
 import AccountSection from "@/components/sections/account/account-section";
+import Footer from "@/components/sections/footer/footer";
 import GallerySection from "@/components/sections/gallery/gallery-section";
+import GuestbookSection from "@/components/sections/guestbook/guestbook-section";
 import HeroSection from "@/components/sections/hero/hero-section";
 import LocationSection from "@/components/sections/location/location-section";
 import MessageSection from "@/components/sections/message/message-section";
@@ -11,6 +13,7 @@ export default function Home() {
       {SECTIONS.map((section) => (
         <div key={section.id}>{section.component}</div>
       ))}
+      <Footer />
     </>
   );
 }
@@ -39,5 +42,9 @@ export const SECTIONS = [
   {
     id: "account",
     component: <AccountSection />,
+  },
+  {
+    id: "guestbook",
+    component: <GuestbookSection />,
   },
 ] as const;
