@@ -144,7 +144,7 @@ export default function WeddingDaySection() {
         <SectionTitle engTitle="WEDDING DAY" korTitle="결혼식 날짜" />
 
         <div className="space-y-2">
-          <p className="text-xl text-gray-700">
+          <p className="text-lg text-gray-700">
             {formatDateKorean()} | {formatTimeKorean()}
           </p>
 
