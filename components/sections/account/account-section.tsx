@@ -4,7 +4,7 @@ import AccountDialog from "./account-dialog";
 
 export default function AccountSection() {
   return (
-    <SectionContainer id="account" className="space-y-10 px-10">
+    <SectionContainer id="account" className="space-y-10 bg-stone-50/80 px-8">
       <SectionTitle korTitle="마음 전하실 곳" engTitle="THANKS" />
 
       <div className="text-center text-gray-600">

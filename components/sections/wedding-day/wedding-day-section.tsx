@@ -138,7 +138,7 @@ export default function WeddingDaySection() {
   const dayNames = ["일", "월", "화", "수", "목", "금", "토"];
 
   return (
-    <SectionContainer id="wedding-day" className="bg-stone-50/80 px-10">
+    <SectionContainer id="wedding-day" className="px-8">
       {/* 헤더 */}
       <div className="space-y-6 text-center">
         <SectionTitle engTitle="WEDDING DAY" korTitle="결혼식 날짜" />

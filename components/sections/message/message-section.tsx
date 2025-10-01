@@ -7,7 +7,7 @@ import InteractivePets from "./interactive-pets";
 
 export default function MessageSection() {
   return (
-    <SectionContainer id="message" className="gap-10 px-8">
+    <SectionContainer id="message" className="gap-10 bg-stone-50/80 px-8">
       <SectionTitle korTitle="초대합니다" engTitle="INVITATION" />
 
       <p className="text-center leading-relaxed">
