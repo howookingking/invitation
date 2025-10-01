@@ -5,7 +5,7 @@ import GuestbookSection from "@/components/sections/guestbook/guestbook-section"
 import HeroSection from "@/components/sections/hero/hero-section";
 import LocationSection from "@/components/sections/location/location-section";
 import MessageSection from "@/components/sections/message/message-section";
-import WeddingInfoSection from "@/components/sections/wedding-info/wedding-info-section";
+import WeddingDaySection from "@/components/sections/wedding-day/wedding-day-section";
 
 export const dynamic = "force-dynamic";
 
@@ -30,8 +30,8 @@ export const SECTIONS = [
     component: <MessageSection />,
   },
   {
-    id: "info",
-    component: <WeddingInfoSection />,
+    id: "wedding-day",
+    component: <WeddingDaySection />,
   },
   {
     id: "location",

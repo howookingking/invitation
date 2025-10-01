@@ -4,7 +4,7 @@ import GalleryCarousel from "./gallery-carousel";
 
 export default function GallerySection() {
   return (
-    <SectionContainer id="gallery">
+    <SectionContainer id="gallery" className="bg-stone-50/80">
       <SectionTitle korTitle="갤러리" engTitle="GALLERY" className="pb-10" />
 
       <GalleryCarousel />

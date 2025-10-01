@@ -18,8 +18,16 @@ export const WEDDING_INFO = {
     pet: "올리, 호우",
   },
   contact: {
-    groom: "010-5651-4187",
-    bride: "010-9755-2517",
+    groom: {
+      self: "010-5651-4187",
+      father: "010-2311-2517",
+      mother: "010-9490-4187",
+    },
+    bride: {
+      self: "010-9755-2517",
+      father: "010-2311-2517",
+      mother: "010-9490-4187",
+    },
   },
 } as const;
 
