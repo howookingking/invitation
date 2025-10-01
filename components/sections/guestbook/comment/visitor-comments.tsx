@@ -1,5 +1,6 @@
 import { fetchComments } from "@/lib/supabase/services/comments";
 import AccordionComments from "./accordion-comments";
+import type { DicebearAvatarOptions } from "./dicebear-avatar";
 import SingleComment from "./single-comment";
 
 const INITIAL_DISPLAY_COUNT = 6;
@@ -9,8 +10,8 @@ export default async function VisitorComments() {
 
   if (comments.length === 0) {
     return (
-      <p className="text-muted-foreground text-center">
-        첫 번째 댓글을 남겨보세요!
+      <p className="text-muted-foreground mt-20 text-center">
+        첫 번째 축하말을 남겨보세요!
       </p>
     );
   }
@@ -29,6 +30,7 @@ export default async function VisitorComments() {
             createdAt={comment.created_at}
             name={comment.name}
             visitorId={comment.visitor_id}
+            avatarOption={comment.avatar_option as DicebearAvatarOptions}
           />
         ))}
       </ul>

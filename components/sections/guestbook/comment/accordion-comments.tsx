@@ -7,9 +7,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import type { CommentWithoutPassword } from "@/lib/supabase/services/comments";
-import SingleComment from "./single-comment";
-import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
+import type { DicebearAvatarOptions } from "./dicebear-avatar";
+import SingleComment from "./single-comment";
 
 export default function AccordionComments({
   remainingComments,
@@ -40,6 +41,7 @@ export default function AccordionComments({
                 createdAt={comment.created_at}
                 name={comment.name}
                 visitorId={comment.visitor_id}
+                avatarOption={comment.avatar_option as DicebearAvatarOptions}
               />
             ))}
           </ul>

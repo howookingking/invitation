@@ -1,6 +1,6 @@
 import CommentTimeIndicator from "./comment-time-indicator";
 import ConfirmDeleteCommentDialog from "./confirm-delete-comment-dialog";
-import DicebearAvatar from "./dicebear-avatar";
+import DicebearAvatar, { type DicebearAvatarOptions } from "./dicebear-avatar";
 import MyCommentBadge from "./my-comment-indicator";
 
 type Props = {
@@ -9,6 +9,7 @@ type Props = {
   createdAt: string;
   name: string;
   visitorId: string;
+  avatarOption: DicebearAvatarOptions;
 };
 
 export default function SingleComment({
@@ -17,6 +18,7 @@ export default function SingleComment({
   createdAt,
   commentId,
   visitorId,
+  avatarOption,
 }: Props) {
   return (
     <li className="bg-card hover:bg-muted/30 relative h-full rounded-sm border p-4 transition-colors">
@@ -25,7 +27,7 @@ export default function SingleComment({
           {/* card header */}
 
           <div className="flex items-center gap-1">
-            <DicebearAvatar />
+            <DicebearAvatar avatarOption={avatarOption} />
             <p className="text-sm font-semibold">{name}</p>
           </div>
 

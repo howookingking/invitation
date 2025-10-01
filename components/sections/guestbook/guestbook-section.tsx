@@ -1,7 +1,7 @@
 import SectionContainer from "@/components/common/section-container";
 import SectionTitle from "@/components/common/section-title";
-import VisitorComments from "./comment/visitor-comments";
 import CreateCommentForm from "./comment/create-comment-form";
+import VisitorComments from "./comment/visitor-comments";
 
 export default async function GuestbookSection() {
   return (

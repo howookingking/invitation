@@ -63,6 +63,7 @@ export type Database = {
       }
       invitation_comments: {
         Row: {
+          avatar_option: Json | null
           comment_id: string
           contents: string
           created_at: string
@@ -71,6 +72,7 @@ export type Database = {
           visitor_id: string
         }
         Insert: {
+          avatar_option?: Json | null
           comment_id?: string
           contents: string
           created_at?: string
@@ -79,6 +81,7 @@ export type Database = {
           visitor_id?: string
         }
         Update: {
+          avatar_option?: Json | null
           comment_id?: string
           contents?: string
           created_at?: string

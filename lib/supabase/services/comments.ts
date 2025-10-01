@@ -1,3 +1,4 @@
+import type { DicebearAvatarOptions } from "@/components/sections/guestbook/comment/dicebear-avatar";
 import { Database } from "../database.types";
 import { createClient } from "../server";
 
@@ -17,7 +18,8 @@ export async function fetchComments() {
         name,
         contents,
         visitor_id,
-        created_at
+        created_at,
+        avatar_option
       `,
     )
     .order("created_at", { ascending: false })
@@ -36,6 +38,7 @@ export async function createComment(
   passwordInput: string,
   commentInput: string,
   visitorId: string,
+  avatarOption: DicebearAvatarOptions,
 ) {
   const supabase = await createClient();
 
@@ -44,6 +47,7 @@ export async function createComment(
     name: nameInput,
     password: passwordInput,
     visitor_id: visitorId,
+    avatar_option: avatarOption,
   });
 
   if (error) {
