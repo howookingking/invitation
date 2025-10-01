@@ -3,8 +3,12 @@
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { SECTIONS } from "@/app/page";
+import useIsMobile from "@/hooks/use-is-mobile";
+import { cn } from "@/lib/utils";
 
 export default function SectionIndicator() {
+  const isMobile = useIsMobile();
+
   const [currentSection, setCurrentSection] = useState(0);
 
   const scrollToSection = (index: number) => {
@@ -36,7 +40,13 @@ export default function SectionIndicator() {
   }, []);
 
   return (
-    <div className="fixed top-1/2 right-2 z-50 flex -translate-y-1/2 transform flex-col gap-3">
+    <div
+      className={cn(
+        isMobile
+          ? "hidden"
+          : "fixed top-1/2 right-2 z-50 flex -translate-y-1/2 transform flex-col gap-3",
+      )}
+    >
       {SECTIONS.map((_, index) => (
         <Button
           key={index}
