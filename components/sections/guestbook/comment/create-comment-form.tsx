@@ -51,7 +51,7 @@ export default function CreateCommentForm() {
     }
     if (passwordInput.length === 0) {
       passwordInputRef.current?.focus();
-      toast.warning("비밀번호를 입력해주세요.");
+      toast.warning("비번를 입력해주세요.");
       return;
     }
     if (commentInput.trim().length === 0) {
@@ -105,7 +105,7 @@ export default function CreateCommentForm() {
 
               <RotateCwIcon
                 size={16}
-                className="text-primary absolute -top-2 -right-2 cursor-pointer hover:opacity-50"
+                className="text-primary absolute -top-2 -right-2 cursor-pointer"
                 onClick={() => setAvatarOption(generateAvatar())}
                 strokeWidth={3}
               />
@@ -131,7 +131,7 @@ export default function CreateCommentForm() {
                   />
                   <RotateCwIcon
                     size={16}
-                    className="text-primary absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer hover:opacity-50"
+                    className="text-primary absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer"
                     onClick={() => setNameInput(generateNickname())}
                     strokeWidth={3}
                   />

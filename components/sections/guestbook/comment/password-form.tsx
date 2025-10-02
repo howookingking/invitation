@@ -19,7 +19,7 @@ export default function PasswordForm({
     <div className="space-y-4">
       <div className="flex items-center gap-2">
         <Label htmlFor="password" className="text-muted-foreground shrink-0">
-          비밀번호
+          비번
         </Label>
         <Input
           id="password"
@@ -33,7 +33,7 @@ export default function PasswordForm({
 
       <Alert>
         <AlertCircleIcon />
-        <AlertTitle>비밀번호를 잊어버린 경우</AlertTitle>
+        <AlertTitle>비번을 잊어버린 경우</AlertTitle>
         <AlertDescription className="flex items-center">
           신랑에게 연락주세요~
         </AlertDescription>
