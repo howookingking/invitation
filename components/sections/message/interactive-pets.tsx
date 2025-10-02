@@ -158,8 +158,9 @@ export default function InterativePets() {
                   )}
                 >
                   <div className="rounded-2xl bg-white px-4 py-2 text-center text-xs ring-4 ring-rose-200">
-                    <span className="font-bold">올리</span>
-                    <br /> 와줄거지??
+                    <span className="text-sm font-bold">올리</span>
+                    <br />
+                    "와줄거지??"
                   </div>
                   <div className="absolute -bottom-2 left-1/2 h-0 w-0 -translate-x-1/2 border-t-4 border-r-4 border-l-4 border-t-rose-200 border-r-transparent border-l-transparent" />
                 </div>
@@ -196,9 +197,9 @@ export default function InterativePets() {
                   )}
                 >
                   <div className="rounded-2xl bg-white px-4 py-2 text-center text-xs ring-4 ring-rose-200">
-                    <span className="font-bold">호우</span>
+                    <span className="text-sm font-bold">호우</span>
                     <br />
-                    드디어 결혼한다!
+                    "드디어 결혼하냥!!""
                   </div>
                   <div className="absolute -bottom-2 left-1/2 h-0 w-0 -translate-x-1/2 border-t-4 border-r-4 border-l-4 border-t-rose-200 border-r-transparent border-l-transparent" />
                 </div>
@@ -238,9 +239,9 @@ export default function InterativePets() {
                   )}
                 >
                   <div className="rounded-2xl bg-white px-4 py-2 text-center text-xs ring-4 ring-rose-200">
-                    <span className="font-bold">홍삼</span>
+                    <span className="text-sm font-bold">홍삼</span>
                     <br />
-                    언니 결혼 축하해!~~
+                    "언니 결혼 축하해!~"
                   </div>
                   <div className="absolute -bottom-2 left-1/2 h-0 w-0 -translate-x-1/2 border-t-4 border-r-4 border-l-4 border-t-rose-200 border-r-transparent border-l-transparent" />
                 </div>

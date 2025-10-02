@@ -10,7 +10,7 @@ export default function MessageSection() {
     <SectionContainer id="message" className="gap-10 bg-stone-50/80 px-8">
       <SectionTitle korTitle="초대합니다" engTitle="INVITATION" />
 
-      <p className="text-center leading-relaxed">
+      <p className="text-center leading-relaxed text-gray-800">
         나를 더 좋은 사람이 되고 싶게
         <br />
         만드는 한 사람을 만났습니다.
@@ -25,31 +25,31 @@ export default function MessageSection() {
 
       <div className="flex items-center justify-center space-x-2 text-lg">
         <div className="text-center">
-          <p className="font-medium">
+          <p className="font-medium text-gray-800">
             {WEDDING_INFO.groomFamily.father} ·{" "}
             {WEDDING_INFO.groomFamily.mother}
           </p>
-          <p className="text-sm text-gray-500">의 아들</p>
-          <p className="mt-2 text-xl font-medium text-rose-600">
+          <p className="text-sm text-gray-600">의 아들</p>
+          <p className="text-primary mt-2 text-xl font-medium">
             {WEDDING_INFO.groom.slice(1)}
           </p>
-          <p className="text-xs text-gray-500">
+          <p className="mt-1 text-xs text-gray-600">
             {WEDDING_INFO.groomFamily.pet}의 오빠
           </p>
         </div>
 
-        <HeartIcon className="text-rose-500" size={20} />
+        <HeartIcon className="text-primary" size={20} fill="currentColor" />
 
         <div className="text-center">
-          <p className="font-medium">
+          <p className="font-medium text-gray-800">
             {WEDDING_INFO.brideFamily.father} ·{" "}
             {WEDDING_INFO.brideFamily.mother}
           </p>
-          <p className="text-sm text-gray-500">의 딸</p>
-          <p className="mt-2 text-xl font-medium text-rose-600">
+          <p className="text-sm text-gray-600">의 딸</p>
+          <p className="text-primary mt-2 text-xl font-medium">
             {WEDDING_INFO.bride.slice(1)}
           </p>
-          <p className="text-xs text-gray-500">
+          <p className="mt-1 text-xs text-gray-600">
             {WEDDING_INFO.brideFamily.pet + ", 채현"}의 언니
           </p>
         </div>

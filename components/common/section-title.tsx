@@ -9,8 +9,8 @@ type Props = {
 export default function SectionTitle({ engTitle, korTitle, className }: Props) {
   return (
     <div className={cn("text-center", className)}>
-      <h2 className="text-xs tracking-widest text-rose-300">{engTitle}</h2>
-      <h3 className="text-xl text-rose-600">{korTitle}</h3>
+      <h2 className="text-primary/50 text-xs tracking-widest">{engTitle}</h2>
+      <h3 className="text-primary text-xl">{korTitle}</h3>
     </div>
   );
 }
