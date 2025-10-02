@@ -11,5 +11,5 @@ export default function MyCommentBadge({ visitorId }: { visitorId: string }) {
     return <div />;
   }
 
-  return <Badge>내댓글</Badge>;
+  return <Badge>내축하말</Badge>;
 }

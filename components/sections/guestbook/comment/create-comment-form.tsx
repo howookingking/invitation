@@ -56,13 +56,13 @@ export default function CreateCommentForm() {
     }
     if (commentInput.trim().length === 0) {
       commentInputRef.current?.focus();
-      toast.warning("댓글을 입력해주세요.");
+      toast.warning("축하말을 입력해주세요.");
       return;
     }
 
     if (commentInput.trim().length > COMMENT_INPUT_MAX) {
       commentInputRef.current?.focus();
-      toast.warning(`댓글은 ${COMMENT_INPUT_MAX}자 이하로 입력해주세요.`);
+      toast.warning(`축하말은 ${COMMENT_INPUT_MAX}자 이하로 입력해주세요.`);
       return;
     }
 
@@ -81,7 +81,7 @@ export default function CreateCommentForm() {
 
       setPasswordInput("");
       setCommentInput("");
-      toast.success("댓글이 등록되었습니다.");
+      toast.success("축하말이 등록되었습니다.");
 
       refresh();
     } finally {

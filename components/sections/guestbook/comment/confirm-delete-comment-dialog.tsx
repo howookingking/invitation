@@ -56,7 +56,7 @@ export default function ConfirmDeleteCommentDialog({
 
     refresh();
 
-    toast.success("댓글이 삭제되었습니다.");
+    toast.success("축하말이 삭제되었습니다.");
     setIsDialogOpen(false);
   };
 
@@ -84,7 +84,7 @@ export default function ConfirmDeleteCommentDialog({
     setIsDeleting(false);
 
     refresh();
-    toast.success("댓글이 삭제되었습니다.");
+    toast.success("축하말이 삭제되었습니다.");
 
     setPasswordInput("");
     setIsDialogOpen(false);
@@ -108,7 +108,7 @@ export default function ConfirmDeleteCommentDialog({
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle className="flex items-center gap-2">
-            <Trash2Icon className="text-primary" size={20} /> 댓글을
+            <Trash2Icon className="text-primary" size={20} /> 축하말을
             삭제하시겠습니까?
           </AlertDialogTitle>
           <AlertDialogDescription>
