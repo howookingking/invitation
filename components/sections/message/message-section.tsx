@@ -10,7 +10,7 @@ export default function MessageSection() {
     <SectionContainer id="message" className="gap-10 bg-stone-50/80 px-8">
       <SectionTitle korTitle="초대합니다" engTitle="INVITATION" />
 
-      <p className="text-center leading-relaxed text-gray-800">
+      <p className="text-center leading-relaxed break-keep text-gray-800">
         나를 더 좋은 사람이 되고 싶게
         <br />
         만드는 한 사람을 만났습니다.

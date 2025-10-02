@@ -7,7 +7,7 @@ export default function AccountSection() {
     <SectionContainer id="account" className="space-y-10 bg-stone-50/80 px-8">
       <SectionTitle korTitle="마음 전하실 곳" engTitle="THANKS" />
 
-      <p className="text-center text-gray-800">
+      <p className="text-center break-keep text-gray-800">
         멀리서도 축하의 마음을 전하고 싶으신 분들을 위해 계좌번호를
         안내드립니다.
         <br /> 소중한 축하를 보내주셔서 감사드리며,
