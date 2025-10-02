@@ -13,11 +13,10 @@ const SEEDS = [
 const SKIN_COLORS = ["e6b899", "f5d0c5", "ffcb7e", "d29c7c"];
 const HAIRS = ["balndess", "classic01", "curly", "elvis", "long", "ponyTail"];
 const HAIR_COLORS = [
-  "000000",
-  "1b0b47",
+  "000000", // Black
+  "1b0b47", // Dark Purple
   "47280b", // Dark Brown
   "ad3a20", // Auburn Brown
-  "c8c8c8", // Natural Gray
   "7a4a1c", // Chestnut Brown
 ];
 
