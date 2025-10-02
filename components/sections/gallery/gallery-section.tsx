@@ -4,8 +4,8 @@ import GalleryCarousel from "./gallery-carousel";
 
 export default function GallerySection() {
   return (
-    <SectionContainer id="gallery" className="py-10">
-      <SectionTitle korTitle="갤러리" engTitle="GALLERY" />
+    <SectionContainer id="gallery" className="justify-start pt-10">
+      <SectionTitle korTitle="갤러리" engTitle="GALLERY" className="pb-10" />
 
       <GalleryCarousel />
     </SectionContainer>

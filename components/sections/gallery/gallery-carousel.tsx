@@ -31,16 +31,16 @@ export default function GalleryCarousel() {
   }, [api]);
 
   return (
-    <Carousel className="w-full" opts={{ loop: true }} setApi={setApi}>
+    <Carousel opts={{ loop: true }} setApi={setApi}>
       <CarouselContent>
         {Array.from({ length: 21 }).map((_, index) => (
           <CarouselItem key={index}>
             <Card className="border-0 p-0 shadow-none">
-              <CardContent className="relative flex h-[660px] max-w-[430px] items-center justify-center">
+              <CardContent className="relative flex h-[650px] max-w-[430px] items-center justify-center">
                 <Image
                   src={`/photos/gallery/${index + 1}.jpg`}
                   alt="gallery"
-                  className="object-contain"
+                  className="pointer-events-none object-contain select-none"
                   fill
                   sizes="width: 430px"
                   priority={index < 6}
