@@ -91,25 +91,17 @@ export default function CreateCommentForm() {
   return (
     <>
       <form className="pb-4" onSubmit={handleSubmit}>
-        <div className="text-muted-foreground mb-1 text-xs">
-          * 동일기기 동일브라우저 사용시
-          <Badge className="mx-1">내댓글</Badge>이 표시됩니다
-        </div>
-
         <div className="bg-muted/50 space-y-4 rounded-sm border p-4">
           <div className="flex items-center justify-between gap-4">
             <div className="relative">
               <DicebearAvatar size={64} avatarOption={avatarOption} />
 
-              <Button
-                type="button"
-                variant="ghost"
-                size="icon"
+              <RotateCwIcon
+                size={16}
+                className="text-primary absolute -top-2 -right-2 cursor-pointer hover:opacity-50"
                 onClick={() => setAvatarOption(generateAvatar())}
-                className="text-primary/80 hover:text-primary absolute top-4 left-3 h-10 w-10 cursor-pointer rounded-full bg-transparent hover:scale-150 hover:animate-spin hover:bg-transparent"
-              >
-                <RotateCwIcon strokeWidth={3} />
-              </Button>
+                strokeWidth={3}
+              />
             </div>
 
             <div className="flex flex-col items-end gap-2">
@@ -132,8 +124,9 @@ export default function CreateCommentForm() {
                   />
                   <RotateCwIcon
                     size={16}
-                    className="text-primary/80 hover:text-primary absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer transition hover:scale-120 hover:animate-spin"
+                    className="text-primary absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer hover:opacity-50"
                     onClick={() => setNameInput(generateNickname())}
+                    strokeWidth={3}
                   />
                 </div>
               </div>
@@ -143,7 +136,7 @@ export default function CreateCommentForm() {
                   htmlFor="password"
                   className="text-muted-foreground shrink-0"
                 >
-                  비밀번호
+                  비번
                 </Label>
                 <Input
                   autoComplete="current-password"

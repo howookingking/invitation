@@ -2,9 +2,9 @@ export const WEDDING_INFO = {
   groom: "이정우",
   bride: "권유진",
   weddingDate: "2026년 1월 18일",
-  weddingTime: "오전 11시 00분",
+  weddingTime: "오전 11시 정각",
   venue: "더베르G 웨딩홀",
-  venueAddress: "서울시 영등포구 국회대로 612 코레일유통사옥 2층",
+  venueAddress: "서울 영등포구 국회대로 612 코레일유통사옥 2층",
   venuePhone: "02. 2088 .5272",
   venueDetail: "2층",
   brideFamily: {
@@ -34,21 +34,21 @@ export const WEDDING_INFO = {
 export const MAPS = [
   {
     provider: "naver",
-    label: "NAVER MAP",
+    label: "N",
     mainColor: "#04c75c",
     textColor: "#fff",
     url: "https://naver.me/FNIA9oNn",
   },
   {
     provider: "kakao",
-    label: "KAKAO MAP",
+    label: "K",
     mainColor: " #FEE500",
     textColor: "#191919",
     url: "https://kko.kakao.com/jWLKS-zeh5",
   },
   {
     provider: "tmap",
-    label: "T MAP",
+    label: "T",
     mainColor: " #FF0000",
     textColor: "#fff",
     url: "https://tmap.life/03f0cc19",

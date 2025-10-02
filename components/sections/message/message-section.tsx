@@ -31,7 +31,7 @@ export default function MessageSection() {
           </p>
           <p className="text-sm text-gray-500">의 아들</p>
           <p className="mt-2 text-xl font-medium text-rose-600">
-            {WEDDING_INFO.groom}
+            {WEDDING_INFO.groom.slice(1)}
           </p>
           <p className="text-xs text-gray-500">
             {WEDDING_INFO.groomFamily.pet}의 오빠
@@ -47,7 +47,7 @@ export default function MessageSection() {
           </p>
           <p className="text-sm text-gray-500">의 딸</p>
           <p className="mt-2 text-xl font-medium text-rose-600">
-            {WEDDING_INFO.bride}
+            {WEDDING_INFO.bride.slice(1)}
           </p>
           <p className="text-xs text-gray-500">
             {WEDDING_INFO.brideFamily.pet + ", 채현"}의 언니

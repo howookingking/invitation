@@ -120,6 +120,7 @@
   }
 }
 
+/* hide scrollbar */
 * {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -127,4 +128,15 @@
 
 *::-webkit-scrollbar {
   display: none;
+}
+
+/* highlight color */
+::selection {
+  background-color: oklch(0.645 0.246 16.439 / 0.5);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: oklch(0.645 0.246 16.439 / 0.5);
+  color: #ffffff;
 }

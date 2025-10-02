@@ -17,10 +17,12 @@ export default function AccountDialog({ type }: { type: "groom" | "bride" }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="font-bold">{title} 측 계좌번호</Button>
+        <Button variant="secondary" className="cursor-pointer">
+          {title} 측 계좌번호
+        </Button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-md">
+      <DialogContent className="pb-10">
         <DialogHeader>
           <DialogTitle>{title} 측 계좌번호</DialogTitle>
           <DialogDescription>마음을 전해주셔서 감사합니다</DialogDescription>

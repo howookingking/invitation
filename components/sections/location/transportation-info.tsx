@@ -8,7 +8,7 @@ import {
 
 export default function TransportationInfo() {
   return (
-    <div className="flex flex-col gap-6 px-8 py-6">
+    <div className="flex flex-col gap-6 px-8">
       {TRANSPORTATIONS.map(({ icon, title, items }) => (
         <div key={title} className="gap-2">
           <div className="mb-1 flex items-center gap-1 text-rose-500">

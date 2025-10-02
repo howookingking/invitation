@@ -5,24 +5,23 @@ import Link from "next/link";
 
 export default function OtherMapProviders() {
   return (
-    <div className="flex">
+    <div className="flex justify-between gap-2 px-8 py-4">
       {MAPS.map(({ label, mainColor, provider, url, textColor }) => (
         <Button
           key={provider}
           asChild
           style={{ backgroundColor: mainColor }}
           className={cn(
-            "w-1/3 rounded-none font-extrabold transition hover:opacity-80",
+            "h-12 w-12 rounded-full text-xl font-bold transition hover:opacity-80",
             provider === "tmap" &&
               "bg-gradient-to-r from-fuchsia-400 via-cyan-400 to-blue-500",
           )}
-          //   className="rounded-lg px-6 py-3 text-white"
         >
           <Link
             href={url}
             style={{ color: textColor }}
             target="_blank"
-            className="font-bold"
+            className=""
           >
             {label}
           </Link>

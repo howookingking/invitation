@@ -155,7 +155,7 @@ export default function WeddingDaySection() {
       </div>
 
       {/* 달력 */}
-      <div className="my-4 mb-12 border-y pt-4">
+      <div className="my-4 mb-12 border-y pt-4 pb-2">
         <div className="mb-4 grid grid-cols-7 gap-2">
           {dayNames.map((day, idx) => (
             <div

@@ -87,7 +87,7 @@ export default function ContactDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="cursor-pointer">
+        <Button className="cursor-pointer" variant="secondary">
           <PhoneIcon />
           연락하기
         </Button>

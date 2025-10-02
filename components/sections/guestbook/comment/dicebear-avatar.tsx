@@ -38,7 +38,7 @@ export default function DicebearAvatar({ avatarOption, size = 36 }: Props) {
       unoptimized
       src={avatarUri}
       alt="Avatar"
-      className="rounded-full"
+      className="pointer-events-none rounded-full select-none"
       width={size}
       height={size}
     />

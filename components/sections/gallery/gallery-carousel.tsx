@@ -42,7 +42,10 @@ export default function GalleryCarousel() {
                   alt="gallery"
                   className="object-contain"
                   fill
-                  sizes="width: 400px"
+                  sizes="width: 430px"
+                  priority={index < 6}
+                  draggable={false}
+                  // TODO: blurDataURL
                 />
               </CardContent>
             </Card>
