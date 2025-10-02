@@ -9,7 +9,7 @@ export default function Footer() {
           </p>
           <div className="mt-4 border-t border-gray-200 pt-4">
             <p className="text-xs font-medium text-gray-600">
-              Created by Jungwoo Lee
+              Created by Jungwoo
             </p>
             <p className="mt-1 text-xs text-gray-400">
               © 2025. All rights reserved
