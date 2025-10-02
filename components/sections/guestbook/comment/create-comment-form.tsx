@@ -1,6 +1,5 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -17,6 +16,8 @@ import { useRef, useState } from "react";
 import { toast } from "sonner";
 import CommentLengthIndicator from "./comment-length-indicator";
 import DicebearAvatar, { type DicebearAvatarOptions } from "./dicebear-avatar";
+
+export const COMMENT_INPUT_MAX = 100;
 
 export default function CreateCommentForm() {
   const { refresh } = useRouter();
@@ -56,6 +57,12 @@ export default function CreateCommentForm() {
     if (commentInput.trim().length === 0) {
       commentInputRef.current?.focus();
       toast.warning("댓글을 입력해주세요.");
+      return;
+    }
+
+    if (commentInput.trim().length > COMMENT_INPUT_MAX) {
+      commentInputRef.current?.focus();
+      toast.warning(`댓글은 ${COMMENT_INPUT_MAX}자 이하로 입력해주세요.`);
       return;
     }
 
