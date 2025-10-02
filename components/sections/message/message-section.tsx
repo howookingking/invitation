@@ -57,7 +57,10 @@ export default function MessageSection() {
 
       <InteractivePets />
 
-      <ContactDialog />
+      <div className="flex flex-col gap-4">
+        <ContactDialog type="groom" />
+        <ContactDialog type="bride" />
+      </div>
     </SectionContainer>
   );
 }

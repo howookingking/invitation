@@ -1,8 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { CopyIcon } from "lucide-react";
+import { CopyIcon, CheckIcon } from "lucide-react";
 import { toast } from "sonner";
+import { useState } from "react";
 
 type Props = {
   label: string;
@@ -12,12 +13,19 @@ type Props = {
 };
 
 export default function AccountItem({ label, name, bank, account }: Props) {
-  const handleCopy = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
     try {
-      navigator.clipboard.writeText(account);
+      await navigator.clipboard.writeText(account);
+      setCopied(true);
+
       toast.success("복사 완료", {
         description: `${name}님의 계좌번호가 복사되었습니다`,
       });
+
+      // 1.5초 뒤 복사 완료 상태 해제
+      setTimeout(() => setCopied(false), 1500);
     } catch {
       toast.error("복사 실패", {
         description: "다시 시도해주세요",
@@ -26,33 +34,36 @@ export default function AccountItem({ label, name, bank, account }: Props) {
   };
 
   return (
-    <div className="flex flex-col gap-2 rounded-lg border p-4">
-      <div className="flex items-center justify-between">
-        <span className="text-primary font-bold">{label}</span>
-        <Button
-          onClick={handleCopy}
-          variant="outline"
-          size="sm"
-          className="cursor-pointer"
-        >
-          <CopyIcon className="mr-1" />
-          복사
-        </Button>
+    <div className="flex items-center justify-between rounded-md border py-2 pr-2 pl-3">
+      <div className="space-y-0.5">
+        <p className="text-sm">{label}</p>
+        <p className="text-xs text-gray-600">
+          {name} · {bank} · {account}
+        </p>
       </div>
-      <div className="space-y-1 text-sm">
-        <div className="flex gap-2">
-          <span className="text-muted-foreground w-12">예금주</span>
-          <span>{name}</span>
-        </div>
-        <div className="flex gap-2">
-          <span className="text-muted-foreground w-12">은행</span>
-          <span>{bank}</span>
-        </div>
-        <div className="flex gap-2">
-          <span className="text-muted-foreground w-12">계좌</span>
-          <span className="font-mono">{account}</span>
-        </div>
-      </div>
+
+      <Button
+        onClick={handleCopy}
+        variant="ghost"
+        size="icon"
+        className="relative cursor-pointer rounded-full"
+      >
+        {/* Copy 아이콘 */}
+        <CopyIcon
+          className={`absolute h-4 w-4 text-gray-600 transition-opacity duration-400 ${
+            copied ? "opacity-0" : "opacity-100"
+          }`}
+          strokeWidth={1.5}
+        />
+
+        {/* Check 아이콘 */}
+        <CheckIcon
+          className={`absolute h-4 w-4 text-green-600 transition-opacity duration-400 ${
+            copied ? "opacity-100" : "opacity-0"
+          }`}
+          strokeWidth={1.8}
+        />
+      </Button>
     </div>
   );
 }

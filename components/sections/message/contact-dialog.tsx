@@ -54,63 +54,69 @@ const brideContacts: Contact[] = [
   },
 ];
 
-export default function ContactDialog() {
-  const renderContactCard = (c: Contact) => (
-    <div
-      key={c.role}
-      className="flex items-center justify-between rounded-md border py-2 pr-2 pl-3"
-    >
-      <div className="space-y-0.5">
-        <p className="text-sm font-medium">{c.role}</p>
-        <p className="text-xs text-gray-600">
-          {c.name} · {c.phone}
-        </p>
-      </div>
-
-      <div className="flex gap-1">
-        <Button variant="ghost" size="icon" asChild className="rounded-full">
-          <Link href={`tel:${c.phone}`}>
-            <PhoneIcon className="h-4 w-4 text-gray-600" strokeWidth={1.5} />
-          </Link>
-        </Button>
-
-        <Button variant="ghost" size="icon" asChild className="rounded-full">
-          <Link href={`sms:${c.phone}`}>
-            <MessageSquareIcon
-              className="h-4 w-4 text-gray-600"
-              strokeWidth={1.5}
-            />
-          </Link>
-        </Button>
-      </div>
-    </div>
-  );
+export default function ContactDialog({ type }: { type: "groom" | "bride" }) {
+  const title = type === "groom" ? "🤵🏻 신랑" : "👰🏻‍♀️ 신부";
+  const contacts = type === "groom" ? groomContacts : brideContacts;
 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="cursor-pointer" variant="secondary">
-          <PhoneIcon />
-          연락하기
+        <Button className="cursor-pointer" variant="secondary" size="sm">
+          {title} 측 연락하기
         </Button>
       </DialogTrigger>
 
       {/* Content */}
       <DialogContent className="pb-10">
         <DialogHeader>
-          <DialogTitle>연락하기</DialogTitle>
+          <DialogTitle>{title} 측 연락하기</DialogTitle>
           <DialogDescription />
         </DialogHeader>
-        <div className="space-y-4">
-          <h3 className="text-sm font-semibold text-blue-500">신랑 측</h3>
-          {groomContacts.map(renderContactCard)}
-        </div>
 
-        <Separator />
+        <div className="space-y-2">
+          {contacts.map((c) => (
+            <div
+              key={c.role}
+              className="flex items-center justify-between rounded-md border py-2 pr-2 pl-3"
+            >
+              <div className="space-y-0.5">
+                <p className="text-sm">{c.role}</p>
+                <p className="text-xs text-gray-600">
+                  {c.name} · {c.phone}
+                </p>
+              </div>
 
-        <div className="space-y-4">
-          <h3 className="text-sm font-semibold text-rose-500">신부 측</h3>
-          {brideContacts.map(renderContactCard)}
+              <div className="flex gap-1">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  asChild
+                  className="rounded-full"
+                >
+                  <Link href={`tel:${c.phone}`}>
+                    <PhoneIcon
+                      className="h-4 w-4 text-gray-600"
+                      strokeWidth={1.5}
+                    />
+                  </Link>
+                </Button>
+
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  asChild
+                  className="rounded-full"
+                >
+                  <Link href={`sms:${c.phone}`}>
+                    <MessageSquareIcon
+                      className="h-4 w-4 text-gray-600"
+                      strokeWidth={1.5}
+                    />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          ))}
         </div>
       </DialogContent>
     </Dialog>

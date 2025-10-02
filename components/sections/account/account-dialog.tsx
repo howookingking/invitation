@@ -13,19 +13,22 @@ import AccountItem from "./account-item";
 export default function AccountDialog({ type }: { type: "groom" | "bride" }) {
   const accounts = ACCOUNT_INFO[type];
   const title = type === "groom" ? "신랑" : "신부";
+  const emoji = type === "groom" ? "🤵🏻" : "👰🏻‍♀️";
 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="secondary" className="cursor-pointer">
-          {title} 측 계좌번호
+        <Button variant="secondary" className="cursor-pointer" size="sm">
+          {emoji} {title} 측 계좌번호
         </Button>
       </DialogTrigger>
 
       <DialogContent className="pb-10">
         <DialogHeader>
-          <DialogTitle>{title} 측 계좌번호</DialogTitle>
-          <DialogDescription>마음을 전해주셔서 감사합니다</DialogDescription>
+          <DialogTitle>
+            {emoji} {title} 측 계좌번호
+          </DialogTitle>
+          <DialogDescription />
         </DialogHeader>
 
         <div className="space-y-3">
