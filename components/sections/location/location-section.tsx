@@ -9,8 +9,10 @@ export default function LocationSection() {
     <SectionContainer id="location" className="bg-stone-50/80 py-10">
       <SectionTitle korTitle="오시는길" engTitle="LOCATION" className="pb-10" />
 
-      <GoogleMap />
-      <OtherMapProviders />
+      <div className="relative">
+        <GoogleMap />
+        <OtherMapProviders />
+      </div>
 
       <TransportationInfo />
     </SectionContainer>

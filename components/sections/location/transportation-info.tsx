@@ -8,17 +8,17 @@ import {
 
 export default function TransportationInfo() {
   return (
-    <div className="flex flex-col gap-6 px-8">
+    <div className="flex flex-col gap-6 px-8 pt-8 pb-0">
       {TRANSPORTATIONS.map(({ icon, title, items }) => (
-        <div key={title} className="gap-2">
-          <div className="mb-1 flex items-center gap-1 text-rose-500">
+        <div key={title}>
+          <div className="text-primary mb-1 flex items-center gap-1 text-lg">
             {icon}
             {title}
           </div>
 
           <ul className="space-y-0.5 pl-1">
             {items.map((item, index) => (
-              <li key={index} className="leading-relaxed text-gray-600">
+              <li key={index} className="text-gray-800">
                 {item}
               </li>
             ))}

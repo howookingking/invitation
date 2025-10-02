@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function OtherMapProviders() {
   return (
-    <div className="flex justify-between gap-2 px-8 py-4">
+    <div className="absolute top-4 right-4 z-10 flex flex-col gap-3">
       {MAPS.map(({ label, mainColor, provider, url, textColor }) => (
         <Button
           key={provider}
