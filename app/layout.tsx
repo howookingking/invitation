@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import { Geist, Gowun_Dodum } from "next/font/google";
 import "./globals.css";
-// import FloatingHearts from "@/components/common/floating-heart";
+import ScrollToTopButton from "@/components/common/scroll-to-top-button";
 
 const font = Gowun_Dodum({
   subsets: ["latin"],
@@ -34,8 +34,10 @@ export default function RootLayout({
           {children}
         </main>
 
-        {/* <FloatingHearts /> */}
         <SectionIndicator />
+
+        <ScrollToTopButton />
+
         <Toaster richColors position="top-center" theme="light" />
       </body>
     </html>
