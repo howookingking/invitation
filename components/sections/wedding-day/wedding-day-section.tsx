@@ -140,11 +140,11 @@ export default function WeddingDaySection() {
   return (
     <SectionContainer id="wedding-day" className="px-8">
       {/* 헤더 */}
-      <div className="space-y-6 text-center">
+      <div className="space-y-10 text-center">
         <SectionTitle engTitle="WEDDING DAY" korTitle="결혼식 날짜" />
 
         <div className="space-y-2">
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-gray-800">
             {formatDateKorean()} | {formatTimeKorean()}
           </p>
 
@@ -188,7 +188,7 @@ export default function WeddingDaySection() {
                           ? "font-light text-rose-300"
                           : dayIdx === 6
                             ? "font-light text-gray-400"
-                            : "font-light text-gray-700"
+                            : "font-light text-gray-800"
                   } `}
                 >
                   {day || ""}
@@ -243,7 +243,7 @@ export default function WeddingDaySection() {
               className="inline-block fill-rose-400 pb-1 text-rose-400"
             />{" "}
             {WEDDING_INFO.bride.slice(1)} 결혼식이{" "}
-            <span className="text-primary font-semibold">
+            <span className="text-primary mr-0.5 text-lg font-semibold">
               {Math.abs(daysDiff)}
             </span>
             일 남았습니다
