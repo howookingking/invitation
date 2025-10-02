@@ -63,7 +63,7 @@ export default function ConfirmDeleteCommentDialog({
   const handleDeleteVisitorComment = async () => {
     if (passwordInput.trim().length === 0) {
       passwordInputRef.current?.focus();
-      toast.warning("비번를 입력해주세요.");
+      toast.warning("비번을 입력해주세요.");
       return;
     }
 

@@ -11,7 +11,7 @@ const SEEDS = [
   "Andrea",
 ];
 const SKIN_COLORS = ["e6b899", "f5d0c5", "ffcb7e", "d29c7c"];
-const HAIRS = ["classic01", "curly", "elvis", "long", "ponyTail"];
+const HAIRS = ["balndess", "classic01", "curly", "elvis", "long", "ponyTail"];
 const HAIR_COLORS = [
   "000000",
   "1b0b47",
