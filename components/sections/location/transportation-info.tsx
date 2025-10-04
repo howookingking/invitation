@@ -11,12 +11,12 @@ export default function TransportationInfo() {
     <div className="flex flex-col gap-6 px-8 pt-8 pb-0">
       {TRANSPORTATIONS.map(({ icon, title, items }) => (
         <div key={title}>
-          <div className="text-primary mb-1 flex items-center gap-1 text-lg">
+          <div className="text-primary mb-1 flex items-center gap-1">
             {icon}
             {title}
           </div>
 
-          <ul className="space-y-0.5 pl-1 break-words">
+          <ul className="space-y-0.5 pl-1 text-sm break-keep">
             {items.map((item, index) => (
               <li key={index} className="text-gray-800">
                 {item}
@@ -48,6 +48,6 @@ const TRANSPORTATIONS = [
   {
     icon: <BusFrontIcon size={16} />,
     title: "셔틀버스",
-    items: ["영등포구청역 5번출구 뒤 ↔ 더베르G 주차장 입구 좌측"],
+    items: ["영등포구청역 5번출구 뒤 ↔ 더베르G 주차장 입구"],
   },
 ] as const;
