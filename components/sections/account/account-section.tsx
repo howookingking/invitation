@@ -11,10 +11,11 @@ export default function AccountSection() {
       <SectionTitle korTitle="마음 전하실 곳" engTitle="THANKS" />
 
       <p className="text-center leading-relaxed break-keep text-gray-800">
-        멀리서도 축하의 마음을 전하고 싶으신 분들을 위해 계좌번호를
-        안내드립니다.
-        <br /> 소중한 축하를 보내주셔서 감사드리며,
-        <br /> 따뜻한 마음에 깊이 감사드립니다.
+        멀리서도 축하를 전하고 싶으신 분들을 위해
+        <br />
+        계좌번호를 안내드립니다.
+        <br />
+        소중한 마음에 진심으로 감사드립니다
       </p>
 
       <div className="flex flex-col gap-4">

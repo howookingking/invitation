@@ -10,7 +10,7 @@ export default async function VisitorComments() {
 
   if (comments.length === 0) {
     return (
-      <p className="text-muted-foreground mt-20 text-center">
+      <p className="text-muted-foreground my-20 text-center">
         첫 번째 축하말을 남겨보세요!
       </p>
     );
