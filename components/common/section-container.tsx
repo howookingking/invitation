@@ -65,10 +65,7 @@ export default function SectionContainer({
     <section
       id={id}
       ref={sectionRef}
-      className={cn(
-        "relative flex min-h-lvh snap-start snap-always flex-col justify-center overflow-hidden",
-        className,
-      )}
+      className={cn("justify-cente relative flex flex-col pt-10", className)}
     >
       {animatedChildren}
     </section>

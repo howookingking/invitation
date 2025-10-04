@@ -20,13 +20,13 @@ export const WEDDING_INFO = {
   contact: {
     groom: {
       self: "010-5651-4187",
-      father: "010-2311-2517",
+      father: "010-7145-9261",
       mother: "010-9490-4187",
     },
     bride: {
       self: "010-9755-2517",
-      father: "010-2311-2517",
-      mother: "010-9490-4187",
+      father: "010-3225-2652",
+      mother: "010-3199-2518",
     },
   },
 } as const;
@@ -60,13 +60,13 @@ export const GOOGLE_MAP_URL =
 
 export const ACCOUNT_INFO = {
   groom: {
-    self: { name: "이정우", bank: "하나", account: "이정우-123-456789" },
-    father: { name: "이윤재", bank: "신한", account: "이윤재-0123-456789" },
-    mother: { name: "이은영", bank: "신한", account: "이은영-123-456789" },
+    self: { name: "이정우", bank: "하나", account: "010-565141-87807" },
+    father: { name: "이윤재", bank: "국민", account: "046-21-0826-829" },
+    mother: { name: "이은영", bank: "제일", account: "405-20-108479" },
   },
   bride: {
-    self: { name: "권유진", bank: "신한", account: "권유진-123-456789" },
-    father: { name: "권순안", bank: "신한", account: "권순안-123-456789" },
-    mother: { name: "홍은수", bank: "신한", account: "홍은수-123-456789" },
+    self: { name: "권유진", bank: "국민", account: "302502-04-111860" },
+    father: { name: "권순안", bank: "국민", account: "302-21-0524-859" },
+    mother: { name: "홍은수", bank: "농협", account: "333053-51-048062" },
   },
 } as const;

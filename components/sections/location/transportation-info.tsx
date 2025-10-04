@@ -38,7 +38,7 @@ const TRANSPORTATIONS = [
   {
     icon: <ParkingCircleIcon size={16} />,
     title: "주차",
-    items: ["동일 건물 지하 주차장 이용 가능"],
+    items: ["동일 건물 지하 주차장 이용 가능", "2시간 무료주차"],
   },
   {
     icon: <TramFrontIcon size={16} />,
@@ -48,6 +48,6 @@ const TRANSPORTATIONS = [
   {
     icon: <BusFrontIcon size={16} />,
     title: "셔틀버스",
-    items: ["영등포구청역 5번출구 ↔ 더베르G 주차장 입구 좌측"],
+    items: ["영등포구청역 5번출구 뒤 ↔ 더베르G 주차장 입구 좌측"],
   },
 ] as const;
