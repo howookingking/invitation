@@ -58,7 +58,7 @@ export default function GalleryCarousel() {
                   alt={photo.alt}
                   className="pointer-events-none object-contain select-none"
                   fill
-                  sizes="width: 430px"
+                  sizes="430px"
                   priority={index < 6}
                   draggable={false}
                   placeholder="blur"

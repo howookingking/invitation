@@ -16,7 +16,7 @@ export default function TransportationInfo() {
             {title}
           </div>
 
-          <ul className="space-y-0.5 pl-1">
+          <ul className="space-y-0.5 pl-1 break-words">
             {items.map((item, index) => (
               <li key={index} className="text-gray-800">
                 {item}

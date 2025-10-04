@@ -16,7 +16,7 @@ export default function HeroSection() {
         </h1>
 
         <div className="mt-2 flex flex-col items-center gap-2 text-gray-600">
-          <p className="text-lg">{WEDDING_INFO.weddingDate}</p>
+          <p className="text-lg">{WEDDING_INFO.weddingDate} 일요일</p>
           <p>{WEDDING_INFO.weddingTime}</p>
           <p className="tracking-tight">{WEDDING_INFO.venueAddress}</p>
           <p>{WEDDING_INFO.venue}</p>
