@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${font.className} ${geistMono.variable} bg-rose-50 antialiased`}
+        className={`${font.className} ${geistMono.variable} bg-[#ebf2e4] antialiased`}
       >
         <main className="mx-auto max-w-[430px] bg-white shadow-xl">
           {children}
