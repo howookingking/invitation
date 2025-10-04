@@ -51,7 +51,7 @@ export default function SectionIndicator() {
         <Button
           key={index}
           onClick={() => scrollToSection(index)}
-          className={`h-3 w-3 cursor-pointer rounded-full p-0 transition-all duration-300 hover:bg-rose-400 ${
+          className={`h-3 w-3 rounded-full p-0 transition-all duration-300 hover:bg-rose-400 ${
             currentSection === index
               ? "h-6 bg-rose-500"
               : "bg-rose-200 hover:bg-rose-300"

@@ -46,7 +46,7 @@ export default function AccountItem({ label, name, bank, account }: Props) {
         onClick={handleCopy}
         variant="ghost"
         size="icon"
-        className="relative cursor-pointer rounded-full"
+        className="relative rounded-full"
       >
         {/* Copy 아이콘 */}
         <CopyIcon

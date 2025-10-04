@@ -18,7 +18,7 @@ export default function AccountDialog({ type }: { type: "groom" | "bride" }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="secondary" className="cursor-pointer" size="sm">
+        <Button variant="secondary" size="sm">
           {emoji} {title} 측 계좌번호
         </Button>
       </DialogTrigger>

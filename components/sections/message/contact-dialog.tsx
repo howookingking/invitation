@@ -61,7 +61,7 @@ export default function ContactDialog({ type }: { type: "groom" | "bride" }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="cursor-pointer" variant="secondary" size="sm">
+        <Button variant="secondary" size="sm">
           {title} 측 연락하기
         </Button>
       </DialogTrigger>
