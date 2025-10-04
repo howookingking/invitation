@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <SectionContainer id="hero" className="h-lvh">
-      <div className="z-10 flex h-1/3 flex-col items-center justify-center gap-2 pt-40">
+      <div className="z-10 flex h-1/3 flex-col items-center justify-center gap-2 pt-25">
         <p className="text-lg tracking-wider text-rose-500">
           We Are Getting Married
         </p>
