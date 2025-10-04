@@ -21,7 +21,7 @@ export default function SingleComment({
   avatarOption,
 }: Props) {
   return (
-    <li className="bg-card hover:bg-muted/30 relative h-full rounded-sm border p-4 transition-colors">
+    <li className="relative rounded-sm border p-3">
       <div className="flex h-full flex-col justify-between gap-2">
         <div className="space-y-2">
           {/* card header */}

@@ -16,7 +16,7 @@ export default function MessageSection() {
           제 우리의 이야기가 시작됩니다
           <br />
           <span className="mr-0.5 font-bold text-black">정</span>
-          성 담아 초대하오니
+          성을 담아 초대하오니
           <br />
           <span className="mr-0.5 font-bold text-black">우</span>
           리를 축복해 주세요
