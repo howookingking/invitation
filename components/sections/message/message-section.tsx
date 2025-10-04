@@ -10,18 +10,28 @@ export default function MessageSection() {
     <SectionContainer id="message" className="gap-10 bg-stone-50/80 px-8 pb-10">
       <SectionTitle korTitle="초대합니다" engTitle="INVITATION" />
 
-      <p className="text-center leading-relaxed break-keep text-gray-800">
-        나를 더 좋은 사람이 되고 싶게
-        <br />
-        만드는 한 사람을 만났습니다.
-        <br />
-        함께 한다는 것만으로도
-        <br />
-        미소 짓게 해주는 이 사람과
-        <br />
-        평생을 함께 하고 싶습니다.
-        <br />그 시작의 자리에 함께 하시길 소망합니다.
-      </p>
+      <div className="flex justify-center">
+        <p className="text leading-relaxed break-keep text-gray-600">
+          <span className="mr-0.5 font-bold text-black">이</span>
+          제 우리의 이야기가 시작됩니다
+          <br />
+          <span className="mr-0.5 font-bold text-black">정</span>
+          성 담아 초대하오니
+          <br />
+          <span className="mr-0.5 font-bold text-black">우</span>
+          리를 축복해 주세요
+          <br />
+          <br />
+          <span className="mr-0.5 font-bold text-black">권</span>
+          하고 싶은 기쁨을 나누며
+          <br />
+          <span className="mr-0.5 font-bold text-black">유</span>
+          쾌한 웃음이 가득할 자리에
+          <br />
+          <span className="mr-0.5 font-bold text-black">진</span>
+          심으로 함께해 주세요
+        </p>
+      </div>
 
       <div className="flex items-center justify-center space-x-2 text-lg">
         <div className="text-center">
