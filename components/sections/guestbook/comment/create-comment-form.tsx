@@ -31,7 +31,7 @@ export default function CreateCommentForm() {
   };
 
   const [isCreating, setIsCreating] = useState(false);
-  const [nameInput, setNameInput] = useState(generateNickname());
+  const [nameInput, setNameInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
   const [commentInput, setCommentInput] = useState("");
   const [avatarOption, setAvatarOption] =
@@ -51,7 +51,7 @@ export default function CreateCommentForm() {
     }
     if (passwordInput.length === 0) {
       passwordInputRef.current?.focus();
-      toast.warning("비번을 입력해주세요.");
+      toast.warning("비밀번호를 입력해주세요.");
       return;
     }
     if (commentInput.trim().length === 0) {
@@ -113,12 +113,6 @@ export default function CreateCommentForm() {
 
             <div className="flex flex-col items-end gap-2">
               <div className="flex items-center gap-2">
-                <Label
-                  htmlFor="name"
-                  className="text-muted-foreground shrink-0"
-                >
-                  이름
-                </Label>
                 <div className="relative">
                   <Input
                     autoComplete="username"
@@ -128,6 +122,7 @@ export default function CreateCommentForm() {
                     id="name"
                     value={nameInput}
                     onChange={(e) => setNameInput(e.target.value)}
+                    placeholder="이름"
                   />
                   <RotateCwIcon
                     size={16}
@@ -139,12 +134,6 @@ export default function CreateCommentForm() {
               </div>
 
               <div className="flex items-center gap-2">
-                <Label
-                  htmlFor="password"
-                  className="text-muted-foreground shrink-0"
-                >
-                  비번
-                </Label>
                 <Input
                   autoComplete="current-password"
                   ref={passwordInputRef}
@@ -153,6 +142,7 @@ export default function CreateCommentForm() {
                   id="password"
                   value={passwordInput}
                   onChange={(e) => setPasswordInput(e.target.value)}
+                  placeholder="비밀번호"
                 />
               </div>
             </div>

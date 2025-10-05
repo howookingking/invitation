@@ -88,7 +88,7 @@ export async function deleteCommentWithPassword(
   }
 
   if (comment.password !== password) {
-    return "비번이 일치하지 않습니다.";
+    return "비밀번호가 일치하지 않습니다.";
   }
 
   const { error } = await supabase

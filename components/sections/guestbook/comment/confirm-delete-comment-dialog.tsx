@@ -63,7 +63,7 @@ export default function ConfirmDeleteCommentDialog({
   const handleDeleteVisitorComment = async () => {
     if (passwordInput.trim().length === 0) {
       passwordInputRef.current?.focus();
-      toast.warning("비번을 입력해주세요.");
+      toast.warning("비밀번호를 입력해주세요.");
       return;
     }
 
@@ -96,8 +96,15 @@ export default function ConfirmDeleteCommentDialog({
       : await handleDeleteVisitorComment();
   };
 
+  const handlOpenChange = (open: boolean) => {
+    if (open) {
+      setPasswordInput("");
+    }
+    setIsDialogOpen(open!);
+  };
+
   return (
-    <AlertDialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+    <AlertDialog open={isDialogOpen} onOpenChange={handlOpenChange}>
       <AlertDialogTrigger asChild className="absolute top-2 right-2">
         <XIcon
           size={12}
