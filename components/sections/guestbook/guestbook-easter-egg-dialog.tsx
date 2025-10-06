@@ -57,7 +57,7 @@ export default function GuestbookEasterEggDialog({
 
     setIsSubmitting(false);
 
-    toast.success("기프티콘 순차으로 발송하게요!!");
+    toast.success("기프티콘은 순차적으로 발송됩니다!!");
 
     setIsEasterEggDialogOpen(false);
 
