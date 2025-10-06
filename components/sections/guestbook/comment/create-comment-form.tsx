@@ -70,6 +70,7 @@ export default function CreateCommentForm() {
       toast.warning("비밀번호를 입력해주세요.");
       return;
     }
+
     if (commentInput.trim().length === 0) {
       commentInputRef.current?.focus();
       toast.warning("축하말을 입력해주세요.");

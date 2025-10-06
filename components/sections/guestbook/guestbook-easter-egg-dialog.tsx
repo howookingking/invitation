@@ -18,7 +18,7 @@ import {
 } from "@/lib/supabase/services/easter-egg";
 import { cn } from "@/lib/utils";
 import { InfoIcon, LoaderCircleIcon } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
 type Props = {
@@ -38,8 +38,23 @@ export default function GuestbookEasterEggDialog({
 
   const [isSeatTaken, setIsSeatTaken] = useState(false);
 
+  const nameInputRef = useRef<HTMLInputElement | null>(null);
+  const phoneInputRef = useRef<HTMLInputElement | null>(null);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (nameInput.trim().length === 0) {
+      nameInputRef.current?.focus();
+      toast.warning("이름을 입력해주세요.");
+      return;
+    }
+
+    if (phoneInput.length === 0) {
+      phoneInputRef.current?.focus();
+      toast.warning("전화번호를 입력해주세요.");
+      return;
+    }
 
     setIsSubmitting(true);
 
@@ -50,7 +65,7 @@ export default function GuestbookEasterEggDialog({
     );
 
     if (result) {
-      toast.warning(result);
+      toast.error(result);
       setIsSubmitting(false);
       return;
     }
@@ -103,6 +118,7 @@ export default function GuestbookEasterEggDialog({
                 placeholder="이름"
                 value={nameInput}
                 onChange={(e) => setNameInput(e.target.value)}
+                ref={nameInputRef}
               />
               <Input
                 id="phone"
@@ -110,22 +126,21 @@ export default function GuestbookEasterEggDialog({
                 placeholder="전화번호"
                 value={phoneInput}
                 onChange={(e) => setPhoneInput(e.target.value)}
+                ref={phoneInputRef}
               />
             </div>
 
             <Alert>
               <InfoIcon />
-              <AlertTitle>
-                개인정보는 기프티콘 전송 후 모두 폐기됩니다
-              </AlertTitle>
+              <AlertTitle>개인정보 상품 전송 후 삭제</AlertTitle>
             </Alert>
 
             <DialogFooter>
               <DialogClose asChild>
                 <Button variant="outline">닫기</Button>
               </DialogClose>
-              <Button type="submit">
-                등록
+              <Button type="submit" disabled={isSubmitting}>
+                전송
                 {isSubmitting && (
                   <LoaderCircleIcon className="ml-1 animate-spin" />
                 )}
