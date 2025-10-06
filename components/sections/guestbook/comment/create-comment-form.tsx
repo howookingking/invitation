@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import useIsMac from "@/hooks/use-is-mac";
 import useIsMobile from "@/hooks/use-is-mobile";
@@ -10,10 +9,12 @@ import { generateAvatar } from "@/lib/avatart-generator";
 import generateNickname from "@/lib/nickname-generator";
 import { createComment } from "@/lib/supabase/services/comments";
 import { getOrCreateVisitorId } from "@/lib/utils";
+import { useEasterEggStore } from "@/store/use-easter-egg-store";
 import { LoaderCircle, RotateCwIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
+import GuestbookEasterEggDialog from "../guestbook-easter-egg-dialog";
 import CommentLengthIndicator from "./comment-length-indicator";
 import DicebearAvatar, { type DicebearAvatarOptions } from "./dicebear-avatar";
 
@@ -21,6 +22,8 @@ export const COMMENT_INPUT_MAX = 100;
 
 export default function CreateCommentForm() {
   const { refresh } = useRouter();
+
+  const { step } = useEasterEggStore();
 
   const isMobile = useIsMobile();
   const isMac = useIsMac();
@@ -41,6 +44,8 @@ export default function CreateCommentForm() {
   const passwordInputRef = useRef<HTMLInputElement | null>(null);
   const commentInputRef = useRef<HTMLTextAreaElement | null>(null);
 
+  const [isEasterEggDialogOpen, setIsEasterEggDialogOpen] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -49,6 +54,17 @@ export default function CreateCommentForm() {
       toast.warning("이름을 입력해주세요.");
       return;
     }
+
+    if (
+      step >= 2 &&
+      avatarOption.hair![0] === "ponyTail" &&
+      avatarOption.glassesProbability === 100 &&
+      nameInput === "벽타는나무늘보"
+    ) {
+      setIsEasterEggDialogOpen(true);
+      return;
+    }
+
     if (passwordInput.length === 0) {
       passwordInputRef.current?.focus();
       toast.warning("비밀번호를 입력해주세요.");
@@ -168,6 +184,11 @@ export default function CreateCommentForm() {
           </div>
         </div>
       </form>
+
+      <GuestbookEasterEggDialog
+        isEasterEggDialogOpen={isEasterEggDialogOpen}
+        setIsEasterEggDialogOpen={setIsEasterEggDialogOpen}
+      />
     </>
   );
 }

@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import hongsam from "@/public/photos/hongsam.png";
 import howoo from "@/public/photos/howoo.png";
 import olly from "@/public/photos/olly.png";
+import { useEasterEggStore } from "@/store/use-easter-egg-store";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import SpeechBallooon from "./speech-ballooon";
@@ -13,6 +14,8 @@ import SpeechBallooon from "./speech-ballooon";
 type PetEnum = "howoo" | "olly" | "hongsam" | null;
 
 export default function InterativePets() {
+  const { setStep } = useEasterEggStore();
+
   const containerRef = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState<PetEnum>(null);
   const [hearts, setHearts] = useState<
@@ -66,6 +69,9 @@ export default function InterativePets() {
         newSeq.every((order, i) => order === PET_ORDER[i])
       ) {
         setIsCorrect(true);
+        setTimeout(() => {
+          setStep(1);
+        }, 0);
       }
 
       return newSeq;

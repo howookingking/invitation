@@ -19,12 +19,14 @@ const HAIR_COLORS = [
   "ad3a20", // Auburn Brown
   "7a4a1c", // Chestnut Brown
 ];
+const GLASS_ODDS = [0, 100];
 
 export function generateAvatar(): DicebearAvatarOptions {
   const avatarOption: DicebearAvatarOptions = {
     size: 64,
     radius: 50,
-    glassesProbability: 50,
+    glassesProbability:
+      GLASS_ODDS[Math.floor(Math.random() * GLASS_ODDS.length)],
     backgroundColor: ["c0aede"],
     hair: [HAIRS[Math.floor(Math.random() * HAIRS.length)] as any],
     hairColor: [HAIR_COLORS[Math.floor(Math.random() * HAIR_COLORS.length)]],

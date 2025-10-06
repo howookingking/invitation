@@ -9,9 +9,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Image from "next/image";
-import { useEffect, useState } from "react";
 import p1 from "@/public/photos/gallery/1.jpg";
+import p10 from "@/public/photos/gallery/10.jpg";
+import p11 from "@/public/photos/gallery/11.jpg";
+import p12 from "@/public/photos/gallery/12.jpg";
+import p13 from "@/public/photos/gallery/13.jpg";
+import p14 from "@/public/photos/gallery/14.jpg";
+import p15 from "@/public/photos/gallery/15.jpg";
+import p16 from "@/public/photos/gallery/16.jpg";
 import p2 from "@/public/photos/gallery/2.jpg";
 import p3 from "@/public/photos/gallery/3.jpg";
 import p4 from "@/public/photos/gallery/4.jpg";
@@ -20,15 +25,8 @@ import p6 from "@/public/photos/gallery/6.jpg";
 import p7 from "@/public/photos/gallery/7.jpg";
 import p8 from "@/public/photos/gallery/8.jpg";
 import p9 from "@/public/photos/gallery/9.jpg";
-import p10 from "@/public/photos/gallery/10.jpg";
-import p11 from "@/public/photos/gallery/11.jpg";
-import p12 from "@/public/photos/gallery/12.jpg";
-import p13 from "@/public/photos/gallery/13.jpg";
-import p14 from "@/public/photos/gallery/14.jpg";
-import p15 from "@/public/photos/gallery/15.jpg";
-import p16 from "@/public/photos/gallery/16.jpg";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 import EasterEggDialog from "./ester-egg-dialog";
 
 export default function GalleryCarousel() {
@@ -48,8 +46,6 @@ export default function GalleryCarousel() {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
-
-  const handleClick = () => console.log("first");
 
   return (
     <Carousel opts={{ loop: true }} setApi={setApi}>
