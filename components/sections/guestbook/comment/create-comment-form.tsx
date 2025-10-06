@@ -10,7 +10,7 @@ import generateNickname from "@/lib/nickname-generator";
 import { createComment } from "@/lib/supabase/services/comments";
 import { getOrCreateVisitorId } from "@/lib/utils";
 import { useEasterEggStore } from "@/store/use-easter-egg-store";
-import { LoaderCircle, RotateCwIcon } from "lucide-react";
+import { LoaderCircleIcon, RotateCwIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
@@ -179,7 +179,7 @@ export default function CreateCommentForm() {
 
             <Button size="sm" type="submit" disabled={isCreating}>
               등록 {getShortcutText()}{" "}
-              {isCreating && <LoaderCircle className="ml-1 animate-spin" />}
+              {isCreating && <LoaderCircleIcon className="ml-1 animate-spin" />}
             </Button>
           </div>
         </div>

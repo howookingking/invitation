@@ -61,6 +61,30 @@ export type Database = {
           },
         ]
       }
+      easter_egg_contacts: {
+        Row: {
+          created_at: string
+          id: number
+          name: string
+          phone: string
+          visitor_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: number
+          name: string
+          phone: string
+          visitor_id?: string
+        }
+        Update: {
+          created_at?: string
+          id?: number
+          name?: string
+          phone?: string
+          visitor_id?: string
+        }
+        Relationships: []
+      }
       invitation_comments: {
         Row: {
           avatar_option: Json | null

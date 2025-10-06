@@ -1,0 +1,41 @@
+"use server";
+
+import { createClient } from "../server";
+
+export async function createEasterEggContact(
+  nameInput: string,
+  phoneInput: string,
+  visitorId: string,
+) {
+  const supabase = await createClient();
+
+  const { error } = await supabase.from("easter_egg_contacts").insert({
+    name: nameInput,
+    phone: phoneInput,
+    visitor_id: visitorId,
+  });
+
+  if (error?.code === "23505") {
+    return "이미 신청 했자낭!!";
+  }
+
+  if (error) {
+    console.error("Error creating contact:", error);
+    throw new Error(error.message);
+  }
+}
+
+export async function fetchContactsCount() {
+  const supabase = await createClient();
+
+  const { count, error } = await supabase
+    .from("easter_egg_contacts")
+    .select("*", { count: "exact" });
+
+  if (error) {
+    console.error("Error counting contact:", error);
+    throw new Error(error.message);
+  }
+
+  return count ?? 0;
+}

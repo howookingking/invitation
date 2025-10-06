@@ -8,3 +8,5 @@ export const PET_ORDER = [
   "hongsam",
   "howoo",
 ] as const;
+
+export const GIFT_NUMBER = 10;
