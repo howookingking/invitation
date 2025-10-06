@@ -24,7 +24,7 @@ export function generateAvatar(): DicebearAvatarOptions {
   const avatarOption: DicebearAvatarOptions = {
     size: 64,
     radius: 50,
-    glassesProbability: 30,
+    glassesProbability: 50,
     backgroundColor: ["c0aede"],
     hair: [HAIRS[Math.floor(Math.random() * HAIRS.length)] as any],
     hairColor: [HAIR_COLORS[Math.floor(Math.random() * HAIR_COLORS.length)]],
