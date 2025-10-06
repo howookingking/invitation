@@ -27,7 +27,7 @@ import p8 from "@/public/photos/gallery/8.jpg";
 import p9 from "@/public/photos/gallery/9.jpg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import EasterEggDialog from "./ester-egg-dialog";
+import GalleryEasterEggDialog from "./gallery-ester-egg-dialog";
 
 export default function GalleryCarousel() {
   const [api, setApi] = useState<CarouselApi>();
@@ -64,7 +64,7 @@ export default function GalleryCarousel() {
                   draggable={false}
                   placeholder="blur"
                 />
-                <EasterEggDialog index={index} />
+                <GalleryEasterEggDialog index={index} />
               </CardContent>
             </Card>
           </CarouselItem>

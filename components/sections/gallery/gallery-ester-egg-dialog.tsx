@@ -10,7 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useEasterEggStore } from "@/store/use-easter-egg-store";
 
-export default function EasterEggDialog({ index }: { index: number }) {
+export default function GalleryEasterEggDialog({ index }: { index: number }) {
   const { setStep, step } = useEasterEggStore();
 
   return (
@@ -27,17 +27,17 @@ export default function EasterEggDialog({ index }: { index: number }) {
         />
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent>
         <DialogHeader>
           <DialogTitle>HINT</DialogTitle>
           <DialogDescription></DialogDescription>
         </DialogHeader>
 
-        <div className="flex flex-col items-center justify-between gap-4">
-          <div className="text-xl font-bold">축하메세지</div>
-          <div className="text-5xl">🐴</div>
+        <div className="trackin flex flex-col items-center justify-between gap-4">
+          <div className="text-xl font-bold">축하말</div>
+          <div className="text-xl font-bold">PONY</div>
           <div className="text-5xl">👓</div>
-          <div className="text-xl font-bold">벽타는나무늘보</div>
+          <div className="text-xl font-bold">이름 : 벽타는나무늘보</div>
           <Button size="sm">등록</Button>
         </div>
       </DialogContent>

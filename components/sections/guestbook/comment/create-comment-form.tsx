@@ -59,7 +59,7 @@ export default function CreateCommentForm() {
       step >= 2 &&
       avatarOption.hair![0] === "ponyTail" &&
       avatarOption.glassesProbability === 100 &&
-      nameInput === "벽타는나무늘보"
+      nameInput.trim() === "벽타는나무늘보"
     ) {
       setIsEasterEggDialogOpen(true);
       return;
