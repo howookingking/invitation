@@ -27,6 +27,9 @@ import p13 from "@/public/photos/gallery/13.jpg";
 import p14 from "@/public/photos/gallery/14.jpg";
 import p15 from "@/public/photos/gallery/15.jpg";
 import p16 from "@/public/photos/gallery/16.jpg";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import EasterEggDialog from "./ester-egg-dialog";
 
 export default function GalleryCarousel() {
   const [api, setApi] = useState<CarouselApi>();
@@ -46,6 +49,8 @@ export default function GalleryCarousel() {
     });
   }, [api]);
 
+  const handleClick = () => console.log("first");
+
   return (
     <Carousel opts={{ loop: true }} setApi={setApi}>
       <CarouselContent>
@@ -63,6 +68,7 @@ export default function GalleryCarousel() {
                   draggable={false}
                   placeholder="blur"
                 />
+                <EasterEggDialog index={index} />
               </CardContent>
             </Card>
           </CarouselItem>
