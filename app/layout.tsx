@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Geist, Gowun_Dodum } from "next/font/google";
 import "./globals.css";
 import ScrollToTopButton from "@/components/common/scroll-to-top-button";
+import CatEasterEgg from "@/components/common/cat-ester-egg";
 
 const font = Gowun_Dodum({
   subsets: ["latin"],
@@ -33,6 +34,8 @@ export default function RootLayout({
         <main className="mx-auto max-w-[430px] bg-white shadow-xl">
           {children}
         </main>
+
+        <CatEasterEgg />
 
         <SectionIndicator />
 
