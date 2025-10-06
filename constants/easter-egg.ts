@@ -1,4 +1,4 @@
-const CAT_ORDER = [
+export const PET_ORDER = [
   "howoo",
   "olly",
   "hongsam",
