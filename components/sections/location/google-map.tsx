@@ -46,7 +46,7 @@ export default function CustomGoogleMap() {
             position={WEDDING_INFO.venueGPS}
           />
 
-          {zoom >= 17 && step >= 2 && (
+          {zoom >= 13 && step >= 2 && (
             <GoogleMapMarker
               position={HAMMERING_MAN_GPS}
               title="Hammering Man"
