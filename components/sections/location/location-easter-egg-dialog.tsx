@@ -24,7 +24,7 @@ export default function LocationEasterEggDialog({
           <DialogDescription></DialogDescription>
         </DialogHeader>
 
-        <div className="trackin flex flex-col items-center justify-between gap-4">
+        <div className="flex flex-col items-center justify-between gap-4">
           <div className="text-xl font-bold">축하말</div>
           <div className="text-xl font-bold">PONY</div>
           <div className="text-5xl">👓</div>

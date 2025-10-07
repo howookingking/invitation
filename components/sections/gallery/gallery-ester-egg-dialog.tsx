@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { useEasterEggStore } from "@/store/use-easter-egg-store";
+import Image from "next/image";
+import hintImage from "@/public/hint.png";
 
 export default function GalleryEasterEggDialog({ index }: { index: number }) {
   const { setStep, step } = useEasterEggStore();
@@ -33,12 +35,9 @@ export default function GalleryEasterEggDialog({ index }: { index: number }) {
           <DialogDescription></DialogDescription>
         </DialogHeader>
 
-        <div className="trackin flex flex-col items-center justify-between gap-4">
-          <div className="text-xl font-bold">축하말</div>
-          <div className="text-xl font-bold">PONY</div>
-          <div className="text-5xl">👓</div>
-          <div className="text-xl font-bold">이름 : 벽타는나무늘보</div>
-          <Button size="sm">등록</Button>
+        <div className="flex flex-col items-center justify-between gap-4">
+          <div className="text-xl font-bold">오시는길</div>
+          <Image alt="hint" src={hintImage} width={200} />
         </div>
       </DialogContent>
     </Dialog>
