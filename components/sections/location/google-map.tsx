@@ -2,19 +2,19 @@
 
 import { HAMMERING_MAN_GPS } from "@/constants/easter-egg";
 import { WEDDING_INFO } from "@/constants/wedding";
+import { useEasterEggStore } from "@/store/use-easter-egg-store";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import LocationEasterEggDialog from "./location-easter-egg-dialog";
 import GoogleMapMarker from "./wedding-marker";
-import { useEasterEggStore } from "@/store/use-easter-egg-store";
 
 export default function CustomGoogleMap() {
   const { setStep, step } = useEasterEggStore();
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [zoom, setZoom] = useState(17);
+  // const [zoom, setZoom] = useState(17);
 
-  const mapRef = useRef<google.maps.Map | null>(null);
+  // const mapRef = useRef<google.maps.Map | null>(null);
 
   return (
     <>
@@ -24,15 +24,16 @@ export default function CustomGoogleMap() {
         <GoogleMap
           mapContainerStyle={{ width: "100%", height: "400px" }}
           center={WEDDING_INFO.venueGPS}
-          zoom={zoom}
-          onLoad={(map) => {
-            mapRef.current = map;
-          }}
-          onZoomChanged={() => {
-            if (mapRef.current) {
-              setZoom(mapRef.current.getZoom()!);
-            }
-          }}
+          zoom={17}
+          // zoom={zoom}
+          // onLoad={(map) => {
+          //   mapRef.current = map;
+          // }}
+          // onZoomChanged={() => {
+          //   if (mapRef.current) {
+          //     setZoom(mapRef.current.getZoom()!);
+          //   }
+          // }}
           options={{
             streetViewControl: false,
             mapTypeControl: false,
@@ -46,7 +47,7 @@ export default function CustomGoogleMap() {
             position={WEDDING_INFO.venueGPS}
           />
 
-          {zoom >= 13 && step >= 2 && (
+          {step >= 2 && (
             <GoogleMapMarker
               position={HAMMERING_MAN_GPS}
               title="Hammering Man"
@@ -56,6 +57,16 @@ export default function CustomGoogleMap() {
               }}
             />
           )}
+          {/* {zoom >= 13 && step >= 2 && (
+            <GoogleMapMarker
+              position={HAMMERING_MAN_GPS}
+              title="Hammering Man"
+              onClick={() => {
+                setIsDialogOpen(true);
+                setStep(3);
+              }}
+            />
+          )} */}
         </GoogleMap>
       </LoadScript>
 
