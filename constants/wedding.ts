@@ -5,6 +5,10 @@ export const WEDDING_INFO = {
   weddingTime: "오전 11시 정각",
   venue: "더베르G 웨딩홀",
   venueAddress: "서울 영등포구 국회대로 612 코레일유통사옥 2층",
+  venueGPS: {
+    lat: 37.525918,
+    lng: 126.902232,
+  },
   venuePhone: "02. 2088. 5272",
   venueDetail: "2층",
   brideFamily: {
