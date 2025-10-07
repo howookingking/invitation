@@ -56,7 +56,7 @@ export default function ConfirmDeleteCommentDialog({
 
     refresh();
 
-    toast.success("축하말이 삭제되었습니다.");
+    toast.success("축하말이 삭제되었습니다");
     setIsDialogOpen(false);
   };
 
@@ -84,7 +84,7 @@ export default function ConfirmDeleteCommentDialog({
     setIsDeleting(false);
 
     refresh();
-    toast.success("축하말이 삭제되었습니다.");
+    toast.success("축하말이 삭제되었습니다");
 
     setPasswordInput("");
     setIsDialogOpen(false);
@@ -119,7 +119,7 @@ export default function ConfirmDeleteCommentDialog({
             삭제하시겠습니까?
           </AlertDialogTitle>
           <AlertDialogDescription>
-            이 작업은 실행 후 취소할 수 없습니다.
+            이 작업은 실행 후 취소할 수 없습니다
           </AlertDialogDescription>
         </AlertDialogHeader>
 

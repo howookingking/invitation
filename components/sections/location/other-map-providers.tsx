@@ -12,7 +12,7 @@ export default function OtherMapProviders() {
           asChild
           style={{ backgroundColor: mainColor }}
           className={cn(
-            "h-12 w-12 rounded-full text-xl font-bold transition hover:opacity-80",
+            "h-12 w-12 rounded-full text-xl font-bold shadow-2xl transition hover:opacity-80",
             provider === "tmap" &&
               "bg-gradient-to-r from-fuchsia-400 via-cyan-400 to-blue-500",
           )}

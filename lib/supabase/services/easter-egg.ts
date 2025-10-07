@@ -16,7 +16,7 @@ export async function createEasterEggContact(
   });
 
   if (error?.code === "23505") {
-    return "이미 신청 했자낭!!";
+    return "이미 등록되었습니다";
   }
 
   if (error) {

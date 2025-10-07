@@ -67,6 +67,7 @@ export default function GuestbookEasterEggDialog({
     if (result) {
       toast.error(result);
       setIsSubmitting(false);
+      setIsEasterEggDialogOpen(false);
       return;
     }
 
@@ -84,7 +85,11 @@ export default function GuestbookEasterEggDialog({
     fetchContactsCount().then((count) => {
       setIsSeatTaken(count >= GIFT_NUMBER);
     });
-  }, []);
+    if (isEasterEggDialogOpen) {
+      setNameInput("");
+      setPhoneInput("");
+    }
+  }, [isEasterEggDialogOpen]);
 
   return (
     <Dialog
@@ -103,7 +108,7 @@ export default function GuestbookEasterEggDialog({
           <Alert>
             <InfoIcon />
             <AlertTitle>
-              선착순 인원이 모두 채워졌습니다. 죄송합니다!!
+              선착순 인원이 모두 채워졌습니다, 죄송합니다!!
             </AlertTitle>
           </Alert>
         ) : (
@@ -132,14 +137,16 @@ export default function GuestbookEasterEggDialog({
 
             <Alert>
               <InfoIcon />
-              <AlertTitle>개인정보 상품 전송 후 삭제</AlertTitle>
+              <AlertTitle>상품 전송 후 개인정보 삭제</AlertTitle>
             </Alert>
 
             <DialogFooter>
               <DialogClose asChild>
-                <Button variant="outline">닫기</Button>
+                <Button variant="outline" size="sm">
+                  닫기
+                </Button>
               </DialogClose>
-              <Button type="submit" disabled={isSubmitting}>
+              <Button type="submit" disabled={isSubmitting} size="sm">
                 전송
                 {isSubmitting && (
                   <LoaderCircleIcon className="ml-1 animate-spin" />

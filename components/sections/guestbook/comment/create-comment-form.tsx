@@ -98,7 +98,7 @@ export default function CreateCommentForm() {
 
       setPasswordInput("");
       setCommentInput("");
-      toast.success("축하말이 등록되었습니다.");
+      toast.success("축하말이 등록되었습니다");
 
       refresh();
     } finally {

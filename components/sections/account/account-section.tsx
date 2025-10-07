@@ -13,7 +13,7 @@ export default function AccountSection() {
       <p className="text-center leading-relaxed break-keep text-gray-800">
         멀리서도 축하를 전하고 싶으신 분들을 위해
         <br />
-        계좌번호를 안내드립니다.
+        계좌번호를 안내드립니다
         <br />
         소중한 마음에 진심으로 감사드립니다
       </p>
