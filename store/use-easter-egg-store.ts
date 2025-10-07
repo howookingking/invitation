@@ -1,5 +1,10 @@
 import { create } from "zustand";
 
+// step1 : 올리, 호우, 홍삼
+// step2 : 갤러리
+// step3 : 오시는 길
+// step4 : 축하말
+
 type EasterEggStore = {
   step: number;
   setStep: (step: number) => void;

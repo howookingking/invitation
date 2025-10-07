@@ -6,8 +6,11 @@ import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { useRef, useState } from "react";
 import LocationEasterEggDialog from "./location-easter-egg-dialog";
 import GoogleMapMarker from "./wedding-marker";
+import { useEasterEggStore } from "@/store/use-easter-egg-store";
 
 export default function CustomGoogleMap() {
+  const { setStep, step } = useEasterEggStore();
+
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [zoom, setZoom] = useState(17);
 
@@ -43,11 +46,14 @@ export default function CustomGoogleMap() {
             position={WEDDING_INFO.venueGPS}
           />
 
-          {zoom >= 15 && (
+          {zoom >= 17 && step >= 2 && (
             <GoogleMapMarker
               position={HAMMERING_MAN_GPS}
               title="Hammering Man"
-              onClick={() => setIsDialogOpen(true)}
+              onClick={() => {
+                setIsDialogOpen(true);
+                setStep(3);
+              }}
             />
           )}
         </GoogleMap>
