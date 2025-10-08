@@ -10,13 +10,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { GIFT_NUMBER } from "@/constants/easter-egg";
 import useVisitorId from "@/hooks/use-visitor-id";
-import {
-  createEasterEggContact,
-  fetchContactsCount,
-} from "@/lib/supabase/services/easter-egg";
-import { cn } from "@/lib/utils";
+import { createEasterEggContact } from "@/lib/supabase/services/easter-egg";
 import { InfoIcon, LoaderCircleIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
@@ -36,7 +31,7 @@ export default function GuestbookEasterEggDialog({
   const [nameInput, setNameInput] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
 
-  const [isSeatTaken, setIsSeatTaken] = useState(false);
+  const [contactCount, setContactCount] = useState(0);
 
   const nameInputRef = useRef<HTMLInputElement | null>(null);
   const phoneInputRef = useRef<HTMLInputElement | null>(null);
@@ -82,9 +77,6 @@ export default function GuestbookEasterEggDialog({
   };
 
   useEffect(() => {
-    fetchContactsCount().then((count) => {
-      setIsSeatTaken(count >= GIFT_NUMBER);
-    });
     if (isEasterEggDialogOpen) {
       setNameInput("");
       setPhoneInput("");
@@ -100,61 +92,49 @@ export default function GuestbookEasterEggDialog({
         <DialogHeader>
           <DialogTitle>축하합니다🎉🥳</DialogTitle>
           <DialogDescription>
-            선착순으로 스타벅스 기프티콘을 드립니다!
+            추첨을 통해 스타벅스 기프티콘을 드립니다!
           </DialogDescription>
         </DialogHeader>
 
-        {isSeatTaken ? (
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="flex flex-col gap-2">
+            <Input
+              id="name"
+              name="name"
+              placeholder="이름"
+              value={nameInput}
+              onChange={(e) => setNameInput(e.target.value)}
+              ref={nameInputRef}
+            />
+            <Input
+              id="phone"
+              name="phone"
+              placeholder="전화번호"
+              value={phoneInput}
+              onChange={(e) => setPhoneInput(e.target.value)}
+              ref={phoneInputRef}
+            />
+          </div>
+
           <Alert>
             <InfoIcon />
-            <AlertTitle>
-              선착순 인원이 모두 채워졌습니다, 죄송합니다!!
-            </AlertTitle>
+            <AlertTitle>상품 전송 후 개인정보 삭제</AlertTitle>
           </Alert>
-        ) : (
-          <form
-            onSubmit={handleSubmit}
-            className={cn("space-y-4", isSeatTaken && "hidden")}
-          >
-            <div className="flex flex-col gap-2">
-              <Input
-                id="name"
-                name="name"
-                placeholder="이름"
-                value={nameInput}
-                onChange={(e) => setNameInput(e.target.value)}
-                ref={nameInputRef}
-              />
-              <Input
-                id="phone"
-                name="phone"
-                placeholder="전화번호"
-                value={phoneInput}
-                onChange={(e) => setPhoneInput(e.target.value)}
-                ref={phoneInputRef}
-              />
-            </div>
 
-            <Alert>
-              <InfoIcon />
-              <AlertTitle>상품 전송 후 개인정보 삭제</AlertTitle>
-            </Alert>
-
-            <DialogFooter>
-              <DialogClose asChild>
-                <Button variant="outline" size="sm">
-                  닫기
-                </Button>
-              </DialogClose>
-              <Button type="submit" disabled={isSubmitting} size="sm">
-                전송
-                {isSubmitting && (
-                  <LoaderCircleIcon className="ml-1 animate-spin" />
-                )}
+          <DialogFooter>
+            <DialogClose asChild>
+              <Button variant="outline" size="sm">
+                닫기
               </Button>
-            </DialogFooter>
-          </form>
-        )}
+            </DialogClose>
+            <Button type="submit" disabled={isSubmitting} size="sm">
+              전송
+              {isSubmitting && (
+                <LoaderCircleIcon className="ml-1 animate-spin" />
+              )}
+            </Button>
+          </DialogFooter>
+        </form>
       </DialogContent>
     </Dialog>
   );

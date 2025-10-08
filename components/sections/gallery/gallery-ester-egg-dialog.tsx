@@ -45,6 +45,7 @@ export default function GalleryEasterEggDialog({ index }: { index: number }) {
             placeholder="blur"
             priority
           />
+          <div className="text-sm font-bold">Hammering Man</div>
         </div>
       </DialogContent>
     </Dialog>

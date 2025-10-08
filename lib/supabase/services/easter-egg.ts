@@ -24,18 +24,3 @@ export async function createEasterEggContact(
     throw new Error(error.message);
   }
 }
-
-export async function fetchContactsCount() {
-  const supabase = await createClient();
-
-  const { count, error } = await supabase
-    .from("easter_egg_contacts")
-    .select("*", { count: "exact" });
-
-  if (error) {
-    console.error("Error counting contact:", error);
-    throw new Error(error.message);
-  }
-
-  return count ?? 0;
-}

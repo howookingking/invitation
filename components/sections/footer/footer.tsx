@@ -5,7 +5,7 @@ export default function Footer() {
         <p className="break-keep text-gray-600">
           이 청첩장은 소중한 분들을 초대하기 위해 신랑이 직접 제작하였습니다
         </p>
-        <p className="leading-4 break-keep text-gray-600">
+        <p className="leading-5 break-keep text-gray-600">
           청첩장 안에 작은 퍼즐을 준비했습니다
           <br />
           퍼즐을 푸신 분들께는 감사의 마음을 담아 소정의 선물을 드립니다
