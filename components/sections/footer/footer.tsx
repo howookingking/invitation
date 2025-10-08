@@ -10,7 +10,7 @@ export default function Footer() {
           <br />
           퍼즐을 푸신 분들께는 감사의 마음을 담아 소정의 선물을 드립니다
           <br /> HINT :{" "}
-          <span className="font-bold">검은 고양이이가 친구들을 불러</span>
+          <span className="font-bold">검은 고양이가 친구들을 불러</span>
         </p>
         <div className="mt-4 border-t pt-3">
           <p className="font-medium text-gray-600">Created by Jungwoo</p>
