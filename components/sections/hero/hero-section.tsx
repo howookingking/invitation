@@ -30,7 +30,7 @@ export default function HeroSection() {
         {/* <Image src={heroImage} alt="hero image" className="object-cover" fill /> */}
 
         <video
-          src="/drone.webm"
+          src="/hero-video.webm"
           autoPlay
           loop
           muted
