@@ -7,7 +7,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import Image from "next/image";
-import ponytail from "@/public/ponytail.jpg";
+import ponytail from "@/public/ponytail.webp";
 
 type Props = {
   isDialogOpen: boolean;

@@ -8,7 +8,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-import hintImage from "@/public/hint.png";
+import hammerMan from "@/public/hammer-man.webp";
 import { useEasterEggStore } from "@/store/use-easter-egg-store";
 import Image from "next/image";
 
@@ -38,11 +38,10 @@ export default function GalleryEasterEggDialog({ index }: { index: number }) {
         <div className="flex flex-col items-center justify-between gap-4">
           <div className="text-xl font-bold">오시는길</div>
           <Image
-            alt="hint"
-            src={hintImage}
+            alt="hammer man image"
+            src={hammerMan}
             width={200}
             height={395}
-            placeholder="blur"
             priority
           />
           <div className="text-sm font-bold">Hammering Man</div>
