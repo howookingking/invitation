@@ -1,6 +1,6 @@
 "use client";
 
-import { HAMMERING_MAN_GPS } from "@/constants/easter-egg";
+import { LOCATION_ANSWER_GPS } from "@/constants/easter-egg";
 import { WEDDING_INFO } from "@/constants/wedding";
 import { useEasterEggStore } from "@/store/use-easter-egg-store";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
@@ -49,8 +49,8 @@ export default function CustomGoogleMap() {
 
           {step >= 2 && (
             <GoogleMapMarker
-              position={HAMMERING_MAN_GPS}
-              title="Hammering Man"
+              position={LOCATION_ANSWER_GPS}
+              title="영등포 타임 스퀘어"
               onClick={() => {
                 setIsDialogOpen(true);
                 setStep(3);

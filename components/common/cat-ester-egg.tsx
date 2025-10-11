@@ -22,7 +22,7 @@ export default function CatEasterEgg() {
 
   // 위치 랜덤 선택
   const position = useMemo(() => {
-    const options = [200, 300, 400, 500] as const;
+    const options = [150, 200, 250] as const;
     return options[Math.floor(Math.random() * options.length)];
   }, []);
 

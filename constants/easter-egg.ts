@@ -11,7 +11,7 @@ export const PET_ORDER = [
 
 export const GIFT_NUMBER = 10;
 
-export const HAMMERING_MAN_GPS = {
-  lat: 37.569914,
-  lng: 126.972345,
+export const LOCATION_ANSWER_GPS = {
+  lat: 37.517079,
+  lng: 126.903341,
 };

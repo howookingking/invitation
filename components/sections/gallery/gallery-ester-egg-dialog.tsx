@@ -36,15 +36,18 @@ export default function GalleryEasterEggDialog({ index }: { index: number }) {
         </DialogHeader>
 
         <div className="flex flex-col items-center justify-between gap-4">
-          <div className="text-xl font-bold">오시는길</div>
-          <Image
+          <div className="text-primary text-xl">오시는길</div>
+          <div className="text-lg">영등포</div>
+          <div className="text-5xl">⏰</div>
+          <div className="text-5xl">⬜️</div>
+          <div className="text-lg">우리가 처음 만난 장소</div>
+          {/* <Image
             alt="hammer man image"
             src={hammerMan}
             width={200}
             height={395}
             priority
-          />
-          <div className="text-sm font-bold">Hammering Man</div>
+          /> */}
         </div>
       </DialogContent>
     </Dialog>

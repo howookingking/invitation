@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <SectionContainer id="hero" className="h-lvh pt-0">
-      <div className="absolute top-0 z-50 h-20 w-full bg-gradient-to-b from-stone-50/80 to-transparent" />
+      <div className="absolute top-0 z-50 h-10 w-full bg-gradient-to-b from-stone-50/80 to-transparent" />
 
       <Image
         alt="hero title"
@@ -37,7 +37,7 @@ export default function HeroSection() {
       />
 
       {/* image bottom silhouette */}
-      <div className="absolute -bottom-1 z-50 h-20 w-full bg-gradient-to-b from-transparent to-stone-50/80" />
+      <div className="absolute -bottom-1 z-50 h-10 w-full bg-gradient-to-b from-transparent to-stone-50/80" />
     </SectionContainer>
   );
 }
