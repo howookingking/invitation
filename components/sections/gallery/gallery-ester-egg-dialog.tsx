@@ -8,9 +8,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-import hammerMan from "@/public/hammer-man.webp";
 import { useEasterEggStore } from "@/store/use-easter-egg-store";
-import Image from "next/image";
 
 export default function GalleryEasterEggDialog({ index }: { index: number }) {
   const { setStep, step } = useEasterEggStore();
@@ -41,13 +39,6 @@ export default function GalleryEasterEggDialog({ index }: { index: number }) {
           <div className="text-5xl">⏰</div>
           <div className="text-5xl">⬜️</div>
           <div className="text-lg">우리가 처음 만난 장소</div>
-          {/* <Image
-            alt="hammer man image"
-            src={hammerMan}
-            width={200}
-            height={395}
-            priority
-          /> */}
         </div>
       </DialogContent>
     </Dialog>

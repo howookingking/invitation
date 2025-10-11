@@ -24,8 +24,6 @@ export default function HeroSection() {
         <p>{WEDDING_INFO.venue}</p>
       </div>
 
-      {/* <Image src={heroImage} alt="hero image" className="object-cover" fill /> */}
-
       <video
         src="/hero-video.webm"
         autoPlay
@@ -36,7 +34,6 @@ export default function HeroSection() {
         className="h-full w-full object-cover"
       />
 
-      {/* image bottom silhouette */}
       <div className="absolute -bottom-1 z-50 h-10 w-full bg-gradient-to-b from-transparent to-stone-50/80" />
     </SectionContainer>
   );
