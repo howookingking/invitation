@@ -11,7 +11,7 @@ export default function HeroSection() {
       <Image
         alt="hero title"
         src={heroTitle}
-        className="absolute top-20 z-20"
+        className="cursor- pointer-events-none absolute top-20 z-20 select-none"
       />
 
       <div className="absolute bottom-2 left-1/2 z-10 flex h-1/3 w-full -translate-x-1/2 flex-col items-center justify-center text-white">
