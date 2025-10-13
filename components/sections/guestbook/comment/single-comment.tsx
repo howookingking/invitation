@@ -10,6 +10,7 @@ type Props = {
   name: string;
   visitorId: string;
   avatarOption: DicebearAvatarOptions;
+  isPinned?: boolean;
 };
 
 export default function SingleComment({
@@ -19,9 +20,16 @@ export default function SingleComment({
   commentId,
   visitorId,
   avatarOption,
+  isPinned,
 }: Props) {
   return (
     <li className="relative rounded-sm border p-3">
+      {isPinned && (
+        <p className="absolute -top-3 left-1/2 -translate-x-1/2 text-2xl select-none">
+          📍
+        </p>
+      )}
+
       <div className="flex h-full flex-col justify-between gap-2">
         <div className="space-y-2">
           {/* card header */}

@@ -64,15 +64,15 @@ export default function CatEasterEgg() {
 
   const messageStyle: Record<typeof side, React.CSSProperties> = {
     right: {
-      top: -5,
-      left: -7,
+      top: 10,
+      left: 5.5,
       transform: "rotate(90deg)",
       opacity: isMesasageVisible ? 1 : 0,
       transition: "opacity 0.7s ease",
     },
     left: {
-      top: -5,
-      left: -7,
+      top: 10,
+      left: 5.5,
       transform: "rotate(-90deg)",
       opacity: isMesasageVisible ? 1 : 0,
       transition: "opacity 0.7s ease",

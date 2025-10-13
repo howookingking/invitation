@@ -19,7 +19,8 @@ export async function fetchComments() {
         contents,
         visitor_id,
         created_at,
-        avatar_option
+        avatar_option,
+        is_pinned
       `,
     )
     .order("created_at", { ascending: false })

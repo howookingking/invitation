@@ -91,6 +91,7 @@ export type Database = {
           comment_id: string
           contents: string
           created_at: string
+          is_pinned: boolean
           name: string
           password: string
           visitor_id: string
@@ -100,6 +101,7 @@ export type Database = {
           comment_id?: string
           contents: string
           created_at?: string
+          is_pinned?: boolean
           name: string
           password: string
           visitor_id?: string
@@ -109,6 +111,7 @@ export type Database = {
           comment_id?: string
           contents?: string
           created_at?: string
+          is_pinned?: boolean
           name?: string
           password?: string
           visitor_id?: string
