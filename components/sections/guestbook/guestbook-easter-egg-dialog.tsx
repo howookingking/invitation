@@ -68,7 +68,7 @@ export default function GuestbookEasterEggDialog({
 
     setIsSubmitting(false);
 
-    toast.success("기프티콘은 순차적으로 발송됩니다!!");
+    toast.success("추첨을 통해 스타벅스 기프티콘을 발송합니다!!");
 
     setIsEasterEggDialogOpen(false);
 
