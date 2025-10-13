@@ -44,6 +44,8 @@ export default function LocationEasterEggDialog({
 
           <div className="text-lg">이름 : 벽타는나무늘보</div>
 
+          <span>THEN</span>
+
           <Button size="sm" className="cursor-default">
             등록
           </Button>

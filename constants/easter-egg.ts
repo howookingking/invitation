@@ -4,8 +4,6 @@ export const PET_ORDER = [
   "hongsam",
   "hongsam",
   "olly",
-  "olly",
-  "hongsam",
   "howoo",
 ] as const;
 

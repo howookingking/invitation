@@ -88,7 +88,7 @@ export default function GuestbookEasterEggDialog({
       open={isEasterEggDialogOpen}
       onOpenChange={setIsEasterEggDialogOpen}
     >
-      <DialogContent>
+      <DialogContent className="translate-y-[-90%]">
         <DialogHeader>
           <DialogTitle>축하합니다🎉🥳</DialogTitle>
           <DialogDescription>

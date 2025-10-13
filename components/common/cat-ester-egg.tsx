@@ -103,7 +103,7 @@ export default function CatEasterEgg() {
           className="absolute flex justify-center rounded-xs bg-white p-1 text-sm break-keep ring-2 ring-rose-200"
           style={messageStyle[side]}
         >
-          호올홍홍올올홍호
+          호올홍홍올호
         </div>
       </>
     </div>
