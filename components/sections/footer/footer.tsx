@@ -10,7 +10,8 @@ export default function Footer() {
         <p className="leading-5 break-keep text-gray-600">
           청첩장 안에 작은 퍼즐을 준비했습니다
           <br />
-          퍼즐을 푸신 분들께는 감사의 마음을 담아 소정의 선물을 드립니다
+          퍼즐을 푸신 분들께는 감사의 마음을 담아
+          <br /> 추첨을 통해 소정의 선물을 드립니다
           <br /> HINT :{" "}
           <span className="font-bold">검은 고양이가 친구들을 불러</span>
         </p>
