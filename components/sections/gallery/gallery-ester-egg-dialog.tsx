@@ -19,9 +19,9 @@ export default function GalleryEasterEggDialog({ index }: { index: number }) {
         <Button
           onClick={() => setStep(2)}
           className={cn(
-            index !== 10 || step < 1
+            index !== 12 || step < 1
               ? "hidden"
-              : "absolute top-1/2 left-1/2 h-20 w-20 -translate-x-1/2 -translate-y-1/2 hover:bg-transparent hover:text-white",
+              : "absolute top-1/2 left-1/2 h-20 w-20 -translate-x-[70%] -translate-y-[35%] hover:bg-transparent hover:text-white",
           )}
           variant="ghost"
         />

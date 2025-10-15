@@ -120,7 +120,7 @@ export default function InterativePets() {
             isCorrect={isCorrect}
             korPetName="호우"
             message="드디어 결혼하냥!!"
-            answer="11"
+            answer="13"
             shouldShow={clickedPet === "howoo" || isCorrect}
           />
         </div>

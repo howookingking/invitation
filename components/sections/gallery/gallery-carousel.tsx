@@ -72,11 +72,11 @@ export default function GalleryCarousel() {
       </CarouselContent>
 
       <CarouselPrevious
-        className="left-2 cursor-pointer transition hover:bg-transparent hover:text-white"
+        className="hover:text-primary left-2 cursor-pointer text-white transition hover:bg-transparent"
         variant="ghost"
       />
       <CarouselNext
-        className="right-2 cursor-pointer transition hover:bg-transparent hover:text-white"
+        className="hover:text-primary right-2 cursor-pointer text-white transition hover:bg-transparent"
         variant="ghost"
       />
 
