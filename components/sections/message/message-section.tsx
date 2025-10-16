@@ -7,7 +7,10 @@ import InteractivePets from "./interactive-pets";
 
 export default function MessageSection() {
   return (
-    <SectionContainer id="message" className="gap-10 bg-stone-50/80 px-8 pb-10">
+    <SectionContainer
+      id="message"
+      className="gap-10 overflow-hidden bg-stone-50/80 px-8 pb-10"
+    >
       <SectionTitle korTitle="초대합니다" engTitle="INVITATION" />
 
       <div className="flex justify-center">
