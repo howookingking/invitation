@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import Image from "next/image";
 import ponytail from "@/public/ponytail.webp";
+import SectionTitle from "@/components/common/section-title";
 
 type Props = {
   isDialogOpen: boolean;
@@ -27,7 +28,7 @@ export default function LocationEasterEggDialog({
         </DialogHeader>
 
         <div className="flex flex-col items-center justify-between gap-4">
-          <div className="text-primary text-xl">축하말</div>
+          <SectionTitle engTitle="GUESTBOOK" korTitle="축하말" />
           <div className="flex items-center gap-3">
             <div className="h-16 w-16 rounded-full bg-[#bfadde]" />:
             <Image alt="ponytail image" src={ponytail} width={50} unoptimized />

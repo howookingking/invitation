@@ -1,3 +1,4 @@
+import SectionTitle from "@/components/common/section-title";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -30,14 +31,14 @@ export default function GalleryEasterEggDialog({ index }: { index: number }) {
       <DialogContent>
         <DialogHeader>
           <DialogTitle>HINT</DialogTitle>
-          <DialogDescription></DialogDescription>
+          <DialogDescription />
         </DialogHeader>
 
         <div className="flex flex-col items-center justify-between gap-4">
-          <div className="text-primary text-xl">오시는길</div>
+          <SectionTitle korTitle="오시는길" engTitle="LOCATION" />
           <div className="text-lg">영등포</div>
           <div className="text-5xl">⏰</div>
-          <div className="text-5xl">⬜️</div>
+          <div className="text-5xl">◼️</div>
           <div className="text-lg">우리가 처음 만난 장소</div>
         </div>
       </DialogContent>
