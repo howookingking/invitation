@@ -32,6 +32,7 @@ export function generateAvatar(): DicebearAvatarOptions {
     hairColor: [HAIR_COLORS[Math.floor(Math.random() * HAIR_COLORS.length)]],
     seed: SEEDS[Math.floor(Math.random() * SEEDS.length)],
     skinColor: [SKIN_COLORS[Math.floor(Math.random() * SKIN_COLORS.length)]],
+    mustacheProbability: 0,
   };
 
   return avatarOption;

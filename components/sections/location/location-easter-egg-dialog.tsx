@@ -1,3 +1,4 @@
+import SectionTitle from "@/components/common/section-title";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -6,9 +7,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import Image from "next/image";
-import ponytail from "@/public/ponytail.webp";
-import SectionTitle from "@/components/common/section-title";
 
 type Props = {
   isDialogOpen: boolean;
@@ -30,15 +28,17 @@ export default function LocationEasterEggDialog({
         <div className="flex flex-col items-center justify-between gap-4">
           <SectionTitle engTitle="GUESTBOOK" korTitle="축하말" />
           <div className="flex items-center gap-3">
-            <div className="h-16 w-16 rounded-full bg-[#bfadde]" />:
-            <Image alt="ponytail image" src={ponytail} width={50} unoptimized />
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#bfadde]">
+              <div className="pb-1 text-4xl font-bold">⼥</div>
+            </div>
           </div>
 
           <span>AND</span>
 
           <div className="flex items-center gap-3">
-            <div className="h-16 w-16 rounded-full bg-[#bfadde]" />:
-            <div className="text-5xl">👓</div>
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#bfadde]">
+              <div className="pb-1 text-5xl leading-none">🤓</div>
+            </div>
           </div>
 
           <span>AND</span>

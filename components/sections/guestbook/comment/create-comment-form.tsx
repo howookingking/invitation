@@ -56,8 +56,8 @@ export default function CreateCommentForm() {
     }
 
     if (
-      step >= 3 &&
-      avatarOption.hair![0] === "ponyTail" &&
+      ((step >= 3 && avatarOption.hair![0] === "ponyTail") ||
+        avatarOption.hair![0] === "long") &&
       avatarOption.glassesProbability === 100 &&
       nameInput.trim() === "벽타는나무늘보"
     ) {
