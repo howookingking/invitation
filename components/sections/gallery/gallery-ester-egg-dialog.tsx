@@ -38,7 +38,7 @@ export default function GalleryEasterEggDialog({ index }: { index: number }) {
           <SectionTitle korTitle="오시는길" engTitle="LOCATION" />
           <div className="text-lg">영등포</div>
           <div className="text-5xl">⏰</div>
-          <div className="text-5xl">◼️</div>
+          <div className="bg-primary h-10 w-10" />
           <div className="text-lg">우리가 처음 만난 장소</div>
         </div>
       </DialogContent>

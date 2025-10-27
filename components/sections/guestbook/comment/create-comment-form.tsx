@@ -18,7 +18,7 @@ import GuestbookEasterEggDialog from "../guestbook-easter-egg-dialog";
 import CommentLengthIndicator from "./comment-length-indicator";
 import DicebearAvatar, { type DicebearAvatarOptions } from "./dicebear-avatar";
 
-export const COMMENT_INPUT_MAX = 100;
+export const COMMENT_INPUT_MAX = 120;
 
 export default function CreateCommentForm() {
   const { refresh } = useRouter();
@@ -98,7 +98,7 @@ export default function CreateCommentForm() {
 
       setPasswordInput("");
       setCommentInput("");
-      toast.success("축하말이 등록되었습니다");
+      toast.success("축하말이 등록되었습니다.");
 
       refresh();
     } finally {

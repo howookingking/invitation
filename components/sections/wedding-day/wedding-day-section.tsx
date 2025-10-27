@@ -233,7 +233,7 @@ export default function WeddingDaySection() {
           <p className="text-base text-gray-600">
             오늘은
             <span className="font-medium text-[#b89b8a]"> 결혼식 </span>
-            입니다 💐
+            입니다. 💐
           </p>
         ) : daysDiff < 0 ? (
           <p className="text-gray-600">
@@ -246,7 +246,7 @@ export default function WeddingDaySection() {
             <span className="text-primary mr-0.5 text-lg font-semibold">
               {Math.abs(daysDiff)}
             </span>
-            일 남았습니다
+            일 남았습니다.
           </p>
         ) : (
           <p className="space-x-2 text-base text-gray-600">
@@ -254,7 +254,7 @@ export default function WeddingDaySection() {
             <span className="text-rose-400">♥</span>
             {WEDDING_INFO.bride.slice(1)} 결혼식이
             <span className="font-medium text-[#b89b8a]">{daysDiff}</span>일
-            지났습니다
+            지났습니다.
           </p>
         )}
       </div>

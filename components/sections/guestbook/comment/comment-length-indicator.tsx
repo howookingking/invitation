@@ -5,7 +5,7 @@ export default function CommentLengthIndicator({ length }: { length: number }) {
     <>
       {length === 0 ? (
         <p className="text-muted-foreground text-xs">
-          최대 {COMMENT_INPUT_MAX}자까지 입력 가능합니다
+          최대 {COMMENT_INPUT_MAX}자까지 입력 가능합니다.
         </p>
       ) : length <= COMMENT_INPUT_MAX ? (
         <p className="text-muted-foreground text-xs">
@@ -13,7 +13,7 @@ export default function CommentLengthIndicator({ length }: { length: number }) {
         </p>
       ) : (
         <p className="text-destructive text-xs">
-          {COMMENT_INPUT_MAX}자 이상 입력할 수 없습니다
+          {COMMENT_INPUT_MAX}자 이상 입력할 수 없습니다.
         </p>
       )}
     </>
