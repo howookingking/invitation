@@ -28,16 +28,20 @@ export default function LocationEasterEggDialog({
         <div className="flex flex-col items-center justify-between gap-4">
           <SectionTitle engTitle="GUESTBOOK" korTitle="축하말" />
           <div className="flex items-center gap-3">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#bfadde]">
-              <div className="pb-1 text-4xl font-bold">⼥</div>
+            <div className="relative h-16 w-16 rounded-full bg-[#bfadde]">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl font-bold">
+                ⼥
+              </div>
             </div>
           </div>
 
           <span>AND</span>
 
           <div className="flex items-center gap-3">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#bfadde]">
-              <div className="pb-1 text-5xl leading-none">🤓</div>
+            <div className="relative h-16 w-16 rounded-full bg-[#bfadde]">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[42px] font-bold">
+                🤓
+              </div>
             </div>
           </div>
 

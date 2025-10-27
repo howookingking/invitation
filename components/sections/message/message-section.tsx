@@ -16,13 +16,13 @@ export default function MessageSection() {
       <div className="flex justify-center">
         <p className="text leading-relaxed break-keep text-gray-600">
           <span className="mr-0.5 font-bold text-black">이</span>
-          제 우리의 이야기가 시작됩니다
+          제 우리의 이야기가 시작됩니다.
           <br />
           <span className="mr-0.5 font-bold text-black">정</span>
           성을 담아 초대하오니
           <br />
           <span className="mr-0.5 font-bold text-black">우</span>
-          리를 축복해 주세요
+          리를 축복해 주세요.
           <br />
           <br />
           <span className="mr-0.5 font-bold text-black">권</span>
@@ -32,7 +32,7 @@ export default function MessageSection() {
           쾌한 웃음이 가득할 자리에
           <br />
           <span className="mr-0.5 font-bold text-black">진</span>
-          심으로 함께해 주세요
+          심으로 함께해 주세요.
         </p>
       </div>
 
