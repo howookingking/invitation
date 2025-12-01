@@ -13,7 +13,6 @@ export default function CatEasterEgg() {
   const [clickedCount, setClickedCount] = useState(0);
 
   //   const shouldShow = useMemo(() => Math.random() < ODDS, []);
-
   // 방향 랜덤 선택
   const side = useMemo(() => {
     const options = ["right", "left"] as const;
@@ -84,10 +83,10 @@ export default function CatEasterEgg() {
       setIsMessageVisible(true);
       setClickedCount(clickedCount + 1);
     }
-    if (clickedCount === 1) {
-      setIsHiding(true);
-      setTimeout(() => setIsCatVisible(false), 700);
-    }
+    // if (clickedCount === 1) {
+    //   setIsHiding(true);
+    //   setTimeout(() => setIsCatVisible(false), 700);
+    // }
   };
 
   return (
