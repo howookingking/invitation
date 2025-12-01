@@ -1,3 +1,6 @@
+import Image from "next/image";
+import balckCat from "@/public/lottie/black-cat.png";
+
 export default function Footer() {
   return (
     <footer className="border-t bg-gray-50 px-8 py-8 text-xs">
@@ -14,7 +17,19 @@ export default function Footer() {
           <br />
           추첨을 통해 소정의 선물을 드립니다.
           <br />
-          HINT : <span className="font-bold">검은 고양이가 친구들을 불러</span>
+          HINT :{" "}
+          <span className="font-bold">
+            검은 고양이
+            <Image
+              src={balckCat}
+              width={20}
+              height={20}
+              alt="black cat"
+              className="mx-1 mb-1 inline"
+              unoptimized
+            />
+            가 친구들을 불러
+          </span>
         </p>
         <div className="mt-4 border-t pt-3">
           <p className="font-medium text-gray-600">Created by Jungwoo</p>

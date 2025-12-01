@@ -2,17 +2,15 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import DotLottie from "./dot-lottie";
+import SectionTitle from "./section-title";
 
 const ODDS = 1;
 
 export default function CatEasterEgg() {
   const [isMounted, setIsMounted] = useState(false);
-  const [isCatVisible, setIsCatVisible] = useState(true);
   const [isMesasageVisible, setIsMessageVisible] = useState(false);
   const [isHiding, setIsHiding] = useState(false);
-  const [clickedCount, setClickedCount] = useState(0);
 
-  //   const shouldShow = useMemo(() => Math.random() < ODDS, []);
   // 방향 랜덤 선택
   const side = useMemo(() => {
     const options = ["right", "left"] as const;
@@ -30,8 +28,6 @@ export default function CatEasterEgg() {
   }, []);
 
   if (!isMounted) return null;
-
-  if (!isCatVisible) return null;
 
   // 기본 스타일
   const baseStyle: React.CSSProperties = {
@@ -63,34 +59,27 @@ export default function CatEasterEgg() {
 
   const messageStyle: Record<typeof side, React.CSSProperties> = {
     right: {
-      top: 10,
-      left: 5.5,
+      top: -24,
+      left: -29,
       transform: "rotate(90deg)",
       opacity: isMesasageVisible ? 1 : 0,
       transition: "opacity 0.7s ease",
     },
     left: {
-      top: 10,
-      left: 5.5,
+      top: -24,
+      left: -29,
       transform: "rotate(-90deg)",
       opacity: isMesasageVisible ? 1 : 0,
       transition: "opacity 0.7s ease",
     },
   };
 
-  const handleClick = () => {
-    if (clickedCount === 0) {
-      setIsMessageVisible(true);
-      setClickedCount(clickedCount + 1);
-    }
-    // if (clickedCount === 1) {
-    //   setIsHiding(true);
-    //   setTimeout(() => setIsCatVisible(false), 700);
-    // }
-  };
-
   return (
-    <div onClick={handleClick} style={styleMap[side]} className="relative">
+    <div
+      onClick={() => setIsMessageVisible(true)}
+      style={styleMap[side]}
+      className="relative"
+    >
       <DotLottie
         fileName="cat-hiding"
         loop={false}
@@ -102,6 +91,7 @@ export default function CatEasterEgg() {
           className="absolute flex justify-center rounded-xs bg-white p-1 text-sm break-keep ring-2 ring-rose-200"
           style={messageStyle[side]}
         >
+          <span className="text-primary mr-2">초대합니다</span>
           호올홍홍올호
         </div>
       </>

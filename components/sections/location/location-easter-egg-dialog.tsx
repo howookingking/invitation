@@ -26,7 +26,7 @@ export default function LocationEasterEggDialog({
         </DialogHeader>
 
         <div className="flex flex-col items-center justify-between gap-4">
-          <SectionTitle engTitle="GUESTBOOK" korTitle="축하말" />
+          <span className="text-primary">축하말</span>
           <div className="flex items-center gap-3">
             <div className="relative h-16 w-16 rounded-full bg-[#bfadde]">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl font-bold">

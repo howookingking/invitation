@@ -35,7 +35,7 @@ export default function GalleryEasterEggDialog({ index }: { index: number }) {
         </DialogHeader>
 
         <div className="flex flex-col items-center justify-between gap-4">
-          <SectionTitle korTitle="오시는길" engTitle="LOCATION" />
+          <span className="text-primary">오시는 길</span>
           <div className="text-lg">영등포</div>
           <div className="text-5xl">⏰</div>
           <div className="bg-primary h-10 w-10" />

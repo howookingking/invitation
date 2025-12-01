@@ -25,7 +25,12 @@ export default function SpeechBallooon({
     >
       <div className="flex flex-col items-center gap-1 rounded-sm bg-white p-2 text-xs text-gray-800 ring-4 ring-rose-200">
         {isCorrect ? (
-          <span className={cn(petName === "홍삼" ? "text-2xl" : "text-base")}>
+          <span
+            className={cn(
+              petName === "홍삼" ? "text-2xl" : "text-base",
+              petName === "올리" ? "text-primary" : "",
+            )}
+          >
             {answer}
           </span>
         ) : (
