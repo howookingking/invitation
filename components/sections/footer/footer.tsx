@@ -1,5 +1,4 @@
-import Image from "next/image";
-import balckCat from "@/public/lottie/black-cat.png";
+import DotLottie from "@/components/common/dot-lottie";
 
 export default function Footer() {
   return (
@@ -17,19 +16,19 @@ export default function Footer() {
           <br />
           추첨을 통해 소정의 선물을 드립니다.
           <br />
-          HINT :{" "}
-          <span className="font-bold">
-            검은 고양이
-            <Image
-              src={balckCat}
-              width={20}
-              height={20}
-              alt="black cat"
-              className="mx-1 mb-1 inline"
-              unoptimized
+          <div className="-gap-0 -mt-10 flex items-end justify-center">
+            HINT :<span className="-mr-3 ml-2 font-bold">검은 고양이</span>
+            <DotLottie
+              fileName="cat-hiding"
+              style={{
+                width: 64,
+                height: 64,
+                display: "inline-block",
+                marginBottom: 4,
+              }}
             />
-            가 친구들을 불러
-          </span>
+            <span className="-ml-3 font-bold">가 친구들을 불러</span>
+          </div>
         </p>
         <div className="mt-4 border-t pt-3">
           <p className="font-medium text-gray-600">Created by Jungwoo</p>
