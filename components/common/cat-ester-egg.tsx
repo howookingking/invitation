@@ -2,7 +2,6 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import DotLottie from "./dot-lottie";
-import SectionTitle from "./section-title";
 
 const ODDS = 1;
 
@@ -31,7 +30,6 @@ export default function CatEasterEgg() {
 
   // 기본 스타일
   const baseStyle: React.CSSProperties = {
-    width: "100px",
     height: "100px",
     position: "absolute",
     zIndex: 999,
