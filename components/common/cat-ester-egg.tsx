@@ -8,7 +8,6 @@ const ODDS = 1;
 export default function CatEasterEgg() {
   const [isMounted, setIsMounted] = useState(false);
   const [isMesasageVisible, setIsMessageVisible] = useState(false);
-  const [isHiding, setIsHiding] = useState(false);
 
   // 방향 랜덤 선택
   const side = useMemo(() => {
@@ -41,31 +40,29 @@ export default function CatEasterEgg() {
   const styleMap: Record<typeof side, React.CSSProperties> = {
     right: {
       ...baseStyle,
-      right: 0,
+      right: 21,
       top: `${position}vh`,
-      transform: isHiding
-        ? "translateX(150%) rotate(-90deg)"
-        : "rotate(-90deg)",
+      transform: "rotate(-90deg)",
     },
     left: {
       ...baseStyle,
-      left: 0,
+      left: 21,
       top: `${position}vh`,
-      transform: isHiding ? "translateX(-150%) rotate(90deg)" : "rotate(90deg)",
+      transform: "rotate(90deg)",
     },
   };
 
   const messageStyle: Record<typeof side, React.CSSProperties> = {
     right: {
       top: -24,
-      left: -29,
+      left: -50,
       transform: "rotate(90deg)",
       opacity: isMesasageVisible ? 1 : 0,
       transition: "opacity 0.7s ease",
     },
     left: {
       top: -24,
-      left: -29,
+      left: -50,
       transform: "rotate(-90deg)",
       opacity: isMesasageVisible ? 1 : 0,
       transition: "opacity 0.7s ease",
@@ -90,7 +87,7 @@ export default function CatEasterEgg() {
           style={messageStyle[side]}
         >
           <span className="text-primary mr-2">초대합니다</span>
-          호올홍홍올호
+          <span>호올홍홍올호</span>
         </div>
       </>
     </div>
