@@ -29,7 +29,8 @@ export default function CatEasterEgg() {
 
   // 기본 스타일
   const baseStyle: React.CSSProperties = {
-    height: "100px",
+    width: "120px",
+    height: "120px",
     position: "absolute",
     zIndex: 999,
     transition: "transform 0.7s ease, opacity 0.7s ease",
@@ -40,13 +41,13 @@ export default function CatEasterEgg() {
   const styleMap: Record<typeof side, React.CSSProperties> = {
     right: {
       ...baseStyle,
-      right: 21,
+      right: "0px",
       top: `${position}vh`,
       transform: "rotate(-90deg)",
     },
     left: {
       ...baseStyle,
-      left: 21,
+      left: "0px",
       top: `${position}vh`,
       transform: "rotate(90deg)",
     },
@@ -54,15 +55,15 @@ export default function CatEasterEgg() {
 
   const messageStyle: Record<typeof side, React.CSSProperties> = {
     right: {
-      top: -24,
-      left: -50,
+      top: -10,
+      left: -20,
       transform: "rotate(90deg)",
       opacity: isMesasageVisible ? 1 : 0,
       transition: "opacity 0.7s ease",
     },
     left: {
-      top: -24,
-      left: -50,
+      top: -10,
+      left: -20,
       transform: "rotate(-90deg)",
       opacity: isMesasageVisible ? 1 : 0,
       transition: "opacity 0.7s ease",
