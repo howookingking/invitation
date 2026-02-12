@@ -1,4 +1,6 @@
 import AccountSection from "@/components/sections/account/account-section";
+import AfterWeddingVideoSection from "@/components/sections/after-wedding-video/after-wedding-video-section";
+import EasterEggAnswerSection from "@/components/sections/easter-egg-answer/easter-egg-answer-section";
 import Footer from "@/components/sections/footer/footer";
 import GallerySection from "@/components/sections/gallery/gallery-section";
 import GuestbookSection from "@/components/sections/guestbook/guestbook-section";
@@ -26,8 +28,17 @@ export const SECTIONS = [
     component: <HeroSection />,
   },
   {
+    id: "easter-egg-answer",
+    component: <EasterEggAnswerSection />,
+  },
+
+  {
     id: "message",
     component: <MessageSection />,
+  },
+  {
+    id: "after-wedding-video",
+    component: <AfterWeddingVideoSection />,
   },
   {
     id: "wedding-day",

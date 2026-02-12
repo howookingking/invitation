@@ -11,7 +11,7 @@ export default function MessageSection() {
       id="message"
       className="gap-10 overflow-hidden bg-stone-50/80 px-8 pb-10"
     >
-      <SectionTitle korTitle="초대합니다" engTitle="INVITATION" />
+      <SectionTitle korTitle="잘살게요!" engTitle="Wishing You All The Best" />
 
       <div className="flex justify-center">
         <p className="text leading-relaxed break-keep text-gray-600">

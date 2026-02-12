@@ -253,8 +253,8 @@ export default function WeddingDaySection() {
             {WEDDING_INFO.groom.slice(1)}
             <span className="text-rose-400">♥</span>
             {WEDDING_INFO.bride.slice(1)} 결혼식이
-            <span className="font-medium text-[#b89b8a]">{daysDiff}</span>일
-            지났습니다.
+            <span className="mx-1 font-medium text-[#b89b8a]">{daysDiff}</span>
+            일 지났습니다.
           </p>
         )}
       </div>
